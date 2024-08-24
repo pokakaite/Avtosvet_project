@@ -1,0 +1,54 @@
+.container {
+    width: auto;
+    height: auto;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(0, auto);
+}
+
+.item {
+    border: black 1px solid;
+    padding: 10px;
+    text-align: center;
+    justify-content: space-around;
+}
+
+header {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column: 1 / 11;
+    height: 85px;
+    grid-auto-rows: minmax(0, auto);
+}
+
+.header {
+    text-align: center;
+    margin: auto;
+    width: fit-content;
+    border: 1.5px solid black;
+}
+
+.header_1 {
+    grid-area: 1/2/6/1;
+    width: 250px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+menu {
+    grid-column: 1 / 3;
+    height: auto;
+    width: 200px;
+}
+
+main {
+    height: auto;
+    grid-column: 3 / 11;
+    max-width: fit-content;
+}
+
+footer {
+    grid-column: 1 / 11;
+}
