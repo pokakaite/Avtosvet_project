@@ -1,5 +1,5 @@
 body {
-    color: rgb(215, 215, 215);
+    color: rgb(239, 239, 239);
     margin: 0;
     background-color: rgb(249, 249, 249);
 }
@@ -11,7 +11,7 @@ body {
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: auto auto auto;
     grid-auto-rows: minmax(0, auto);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: Calibri;
     font-size: large;
 }
 
@@ -139,7 +139,9 @@ footer {
     z-index: 0;
 }
 
-.footer_section1, .footer_section2, .footer_section3 {
+.footer_section1, 
+.footer_section2, 
+.footer_section3 {
     margin: 50px;
 }
 
