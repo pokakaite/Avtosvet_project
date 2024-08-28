@@ -1,0 +1,38 @@
+@media(max-width: 1150px) {
+    .menu {
+        visibility: hidden;
+        display: none;
+    }
+
+    main {
+        grid-area: 2;
+        grid-column: 1/11;
+    }
+}
+
+@media(max-width: 1000px) {
+    .header_support, .header_payment{
+        display: none;
+    }
+
+    footer {
+        display: block;
+    }
+
+    .footer_item {
+        align-items: center;
+    }
+
+    .footer {
+        width: fit-content;
+        margin: auto;
+    }
+
+    .footer_at {
+        margin-top: 10px;
+    }
+
+    .cars {
+        margin-left: 10px;
+    }
+}
