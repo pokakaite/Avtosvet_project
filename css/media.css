@@ -57,3 +57,10 @@
         grid-column: 6/8;
     }
 }
+
+@media(min-width: 1600px) {
+    footer {
+        position: fixed;
+        width: 100%;
+    }
+}

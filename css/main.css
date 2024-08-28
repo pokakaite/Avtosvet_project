@@ -72,10 +72,10 @@ header {
     filter: drop-shadow(0 0 5px rgb(0, 94, 255));
 }
 
-.menu {
+/* .menu {
     grid-column: 1 / 3;
     margin: 5px 0 0 5px;
-    display: grid;
+    display: none;
     grid-template-rows: repeat(7, 1fr);
     align-self: self-start;
     color: rgb(29, 39, 50);
@@ -94,13 +94,13 @@ header {
     padding: 15px 0 15px 25px;
     border: 1px solid white;
     background-color: rgb(221, 221, 221);
-}
+} */
 
 main {
     color: rgb(29, 39, 50);
     height: auto;
     width: 100%;
-    grid-column: 3 / 11;
+    grid-column: 1 / 11;
     margin-bottom: 50px;
     text-align: center;
 }
@@ -131,6 +131,7 @@ footer {
     height: auto;
     justify-content: space-between;
     z-index: 0;
+    bottom: 0;
 }
 
 .item_footer {
