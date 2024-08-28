@@ -9,6 +9,7 @@ body {
     height: 100%;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: auto auto auto;
     grid-auto-rows: minmax(0, auto);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: large;
@@ -20,12 +21,16 @@ header {
     height: 85px;
     grid-auto-rows: minmax(0, auto);
     text-wrap: nowrap;
+    position: relative;
+    z-index: 1;
 }
 
 .header {
     text-align: center;
     margin: auto;
     width: fit-content;
+    position: relative;
+    z-index: 1;
 }
 
 .item_header {
@@ -40,7 +45,11 @@ header {
     font-weight: 800;
     color: aliceblue;
     text-decoration: none;
-    text-shadow: rgb(0, 234, 255) 0px 0px 20px;
+    text-shadow: rgb(125, 162, 200) 0px 0px 20px;
+}
+
+.icon_menu {
+    display: none;
 }
 
 .header_crumbles, .footer_crumbles {
@@ -123,10 +132,12 @@ footer {
     display: flex;
     height: auto;
     justify-content: space-between;
+    z-index: 0;
 }
 
 .item_footer {
     background-color: rgb(29, 39, 50);
+    z-index: 0;
 }
 
 .footer_section1, .footer_section2, .footer_section3 {

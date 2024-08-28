@@ -36,3 +36,24 @@
         margin-left: 10px;
     }
 }
+
+@media(max-width: 900px) {
+
+    .header_main, .header_catalog, .header_profile, .header_busket, .header_crumbles {
+        display: none;
+    }
+
+    .item_header {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr)
+    }
+
+    .icon_menu {
+        display: block;
+        grid-column: 11/12;
+    }
+
+    .header_logo {
+        grid-column: 6/8;
+    }
+}
