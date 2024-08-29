@@ -10,8 +10,8 @@
     }
 }
 
-@media(max-width: 1000px) {
-    .header_support, .header_payment{
+@media(max-width: 1100px) {
+    .header_payment{
         display: none;
     }
 
@@ -21,6 +21,13 @@
 
     .footer_item {
         align-items: center;
+    }
+
+    .footer_section1,
+    .footer_section2,
+    .footer_section3 {
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .footer {
@@ -39,7 +46,7 @@
 
 @media(max-width: 900px) {
 
-    .header_main, .header_catalog, .header_profile, .header_busket, .header_crumbles {
+    .header_main, .header_catalog, .header_search, .header_profile, .header_cart {
         display: none;
     }
 
@@ -58,7 +65,7 @@
     }
 }
 
-@media(min-width: 1600px) {
+@media(min-width: 1700px) {
     footer {
         position: fixed;
         width: 100%;
