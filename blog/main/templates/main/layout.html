@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href={% static 'source/css/main.css' %}>
+    <link rel="stylesheet" href={% static 'source/css/media.css' %}>
+    <link rel="stylesheet" href="css/media.css">
+    <title>{{title}}</title>
+</head>
+
+<body>
+<div class="container">
+    <header class="item item_header">
+        <div class="header header_logo">АВТОСВЕТ</div>
+        <div class="header icon_menu">
+            <img class="icon" src="{% static 'source/img/menu.jpg' %}" alt="">
+        </div>
+        <div class="header header_main"><a href="{% url "main:index" %}">Главная</a></div>
+        <div class="header header_catalog">Каталог</div>
+        <div class="header header_payment">Оплата и доставка</div>
+        <div class="header header_search">
+            <input class="search" type="search" placeholder="Что ищете?">
+            <div class="header header_search_icon">
+                <img class="icon" src="{% static 'source/img/search.jpg' %}" alt="">
+            </div>
+        </div>
+        <div class="header header_profile">
+            <img class="icon" src="{% static 'source/img/profile.jpg' %}" alt="">
+        </div>
+        <div class="header header_cart">
+            <img class="icon" src="{% static 'source/img/cart.jpg' %}" alt="">
+        </div>
+    </header>
+
+{% block content %}{% endblock content %}
+
+    <footer class="item item_footer">
+        <div class="footer_section1">
+            <div class="footer footer_logo">АВТОСВЕТ</div>
+            <div class="footer footer_crumbles">
+                <div>
+                    <img class="icon vk" src="{% static 'source/img/vk.jpg' %}" alt="">
+                </div>
+                <div>
+                    <img class="icon whatsapp" src="{% static 'source/img/whatsapp.jpg' %}" alt="">
+                </div>
+            </div>
+            <div class="footer footer_at">@2024 Автосвет</div>
+        </div>
+
+        <div class="footer_section2">
+            <div class="footer footer_main">Главная</div>
+            <div class="footer footer_payment">Оплата и доставка</div>
+            <div class="footer footer_support">Поддержка</div>
+            <div class="footer footer_profile">Профиль</div>
+        </div>
+        
+        <div class="footer_section3">
+            <div class="footer footer_number">+7 (960) 802-92-22</div>
+            <div class="footer footer_work_hours">Режим работы: 9 - 21 каждый день</div>
+            <div class="footer footer_address">г. Стерлитамак, ул. Николаева, д. 2</div>
+            <div class="footer footer_make_web_site">Создать интернет-магазин:</div>
+            <div class="footer footer_email">danilova.katherine02@gmail.com</div>
+        </div>
+    </footer>
+</div>
+</body>
+
+</html>
+
