@@ -124,6 +124,10 @@ a {
     background-color: rgb(221, 221, 221);
 } */
 
+.register {
+    color: black;
+}
+
 main {
     color: rgb(29, 39, 50);
     width: 100%;
