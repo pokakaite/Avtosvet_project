@@ -14,12 +14,18 @@
 <body>
 <div class="container">
     <header class="item item_header">
-        <div class="header header_logo">АВТОСВЕТ</div>
+        <div class="header header_logo">
+            <a href="{% url "main:index" %}">АВТОСВЕТ</a>
+        </div>
         <div class="header icon_menu">
             <img class="icon" src="{% static 'source/img/menu.jpg' %}" alt="">
         </div>
-        <div class="header header_main"><a href="{% url "main:index" %}">Главная</a></div>
-        <div class="header header_catalog">Каталог</div>
+        <div class="header header_main">
+            <a href="{% url "main:index" %}">Главная</a>
+        </div>
+        <div class="header header_catalog">
+            <a href="{% url "catalog:index" %}">Каталог</a>
+        </div>
         <div class="header header_payment">Оплата и доставка</div>
         <div class="header header_search">
             <input class="search" type="search" placeholder="Что ищете?">
@@ -28,18 +34,31 @@
             </div>
         </div>
         <div class="header header_profile">
-            <img class="icon" src="{% static 'source/img/profile.jpg' %}" alt="">
+            <a href="{% url "users:index" %}">
+                <img class="icon" src="{% static 'source/img/profile.jpg' %}" alt="Вход или регистрация">
+            </a>    
         </div>
         <div class="header header_cart">
-            <img class="icon" src="{% static 'source/img/cart.jpg' %}" alt="">
+            <a href="{% url "cart:index" %}">
+                <img class="icon" src="{% static 'source/img/cart.jpg' %}" alt="">
+            </a>
+            
         </div>
     </header>
 
-{% block content %}{% endblock content %}
+    <main class="item item_main">
+        <h1 class="main_title">
+            {{main_title}}
+        </h1>
+        {% block content %}{% endblock content %}
+    </main>
+
 
     <footer class="item item_footer">
         <div class="footer_section1">
-            <div class="footer footer_logo">АВТОСВЕТ</div>
+            <div class="footer footer_logo">
+                <a href="{% url "main:index" %}">АВТОСВЕТ</a>
+            </div>
             <div class="footer footer_crumbles">
                 <div>
                     <img class="icon vk" src="{% static 'source/img/vk.jpg' %}" alt="">
