@@ -59,6 +59,7 @@ header {
     padding-left: 10px;
     border-radius: 1px;
     border: white;
+    box-shadow: rgb(125, 162, 200) 0 0 15px;
 }
 
 .header_search_icon {
