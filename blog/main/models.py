@@ -4,6 +4,7 @@ from django.db import models
 
 class Brands(models.Model):
     brand = models.CharField(max_length=50, verbose_name='Марка автомобиля')
+    slug = models.SlugField(max_length=200, blank=True, db_index=True, default='')
 
     def __str__(self) -> str:
         return self.brand
