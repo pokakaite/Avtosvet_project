@@ -53,6 +53,13 @@
         {% block content %}{% endblock content %}
     </main>
 
+    {% if messages %}
+        {% for message in messages %}
+            <div>
+                {{message}}
+            </div>
+        {% endfor %}
+    {% endif %}
 
     <footer class="item item_footer">
         <div class="footer_section1">
