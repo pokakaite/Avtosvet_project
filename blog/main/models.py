@@ -26,3 +26,7 @@ class ModelCars(models.Model):
         db_table: str = 'car_model'
         verbose_name = 'Модель автомобиля'
         verbose_name_plural = 'Модель автомобиля'
+
+
+class Carcase(models.Model):
+    pass

@@ -49,7 +49,12 @@
         </div>
     </header>
 
-    {% block main %}{% endblock main %}
+    <main class="item item_main">
+        <h1 class="main_title">
+            {{main_title}}
+        </h1>
+    {% block content %}{% endblock content %}
+    </main>
 
     {% if messages %}
         {% for message in messages %}
