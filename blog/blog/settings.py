@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'offset_lamps',
     'length',
     'lamp_types',
-    'amount',
+    'amount_types',
     'colors',
     'carcases',
     'brand_autos',

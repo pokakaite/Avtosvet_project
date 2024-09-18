@@ -13,5 +13,5 @@ class Amount(models.Model):
     
     class Meta:
         db_table: str = 'amount'
-        verbose_name = 'Количество'
-        verbose_name_plural = 'Количество'
+        verbose_name = 'Тип количества'
+        verbose_name_plural = 'Типы количества'
