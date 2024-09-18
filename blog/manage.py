@@ -17,6 +17,16 @@ def main():
         ) from exc
     execute_from_command_line(sys.argv)
 
+    # from brand_autos.models import BrandAuto
+
+    # with open('brands.txt', encoding='utf-8') as f:
+    #     for s in map(str.strip, f.readlines()):
+    #         try:
+    #             obj = BrandAuto.objects.create(name=s)
+    #             obj.save()
+    #         except BaseException as e:
+    #             print(e)
+
 
 if __name__ == '__main__':
     main()

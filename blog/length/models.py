@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 class Length(models.Model):
-    length = models.CharField('length', max_length=10)
+    length = models.CharField('Длина', max_length=10)
 
     def __str__(self) -> str:
         return self.length

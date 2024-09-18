@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 class Offset(models.Model):
-    title = models.CharField('offset', max_length=50)
+    title = models.CharField('Смещение', max_length=50)
 
     def __str__(self) -> str:
         return self.title

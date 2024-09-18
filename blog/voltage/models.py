@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 class Voltage(models.Model):
-    title = models.CharField('voltage', max_length=4)
+    title = models.CharField('Напряжение', max_length=4)
 
     def __str__(self) -> str:
         return self.title

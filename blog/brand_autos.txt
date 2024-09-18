@@ -1,0 +1,53 @@
+Acura
+Alfa Romeo
+Audi
+BMW
+BYD
+Cadillac
+Chery
+Chevrolet
+Chrysler
+Citroen
+Daewoo
+Datsun
+Dodge
+DongFeng
+FAW
+Fiat
+Ford
+Foton
+Geely
+Great Wall
+Haval
+Honda
+Hyundai
+Infiniti
+Jaguar
+Jeep
+KIA
+Land Rover
+Lexus
+Lifan
+Mazda
+Mercedes-Benz
+MINI
+Mitsubishi
+Nissan
+Opel
+Peugeot
+Porsche
+Renault
+Saab
+SEAT
+Skoda
+Smart
+SsangYong
+Subaru
+Suzuki
+Toyota
+Volkswagen
+Volvo
+Лада (ВАЗ)
+ТагАЗ
+ГАЗ
+УАЗ  
