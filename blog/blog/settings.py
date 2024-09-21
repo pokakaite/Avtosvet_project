@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'carcases',
     'brand_autos',
     'brand_lamps',
+    'lamps',
+    'lamp_bases',
     'crispy_forms',
     'crispy_bootstrap5',
     'django.contrib.admin',
