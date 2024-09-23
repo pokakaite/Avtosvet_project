@@ -9,10 +9,13 @@
                     <img class="lamp_image" src="{{lamp.image.url}}">
                 </div>
                 <div class="lamp_title">
-                    Лампа {{lamp.voltage}} {{lamp.base}} {{lamp.watts}} 
-                    {% if lamp.title %}
-                        {{lamp.title}}
-                    {% endif %}
+                    <div class="lamp_title_margin">Лампа {{lamp.voltage}} {{lamp.base}} {{lamp.watts}}</div>
+                    <div class="lamp_title_margin">
+                        {% if lamp.title %}
+                            {{lamp.title}}
+                        {% endif %}
+                    </div>
+
                 </div>
                 <div class="lamp_items lamp_brand">
                     Производитель {{lamp.brand}}
@@ -27,5 +30,4 @@
         {% endif %}
     {% endfor %}
 </div>
-
 {% endblock content %}

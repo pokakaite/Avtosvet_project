@@ -46,9 +46,19 @@ header {
     box-shadow: rgb(125, 162, 200) 0 0 15px;
 }
 
-.header_search_icon {
+.icon {
+    margin: auto;
+    margin-top: 5px;
+    width: 25px;
     filter: invert();
+}
+
+.header_search_icon {
     margin-left: -40px;
+}
+
+.search_icon {
+    filter: none;
 }
 
 .icon_menu {
