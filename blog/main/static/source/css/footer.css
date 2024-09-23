@@ -51,8 +51,14 @@ footer {
     line-height: 28px;
 }
 
+footer a { 
+    text-decoration: none;
+    color: rgb(239, 239, 239);
+} 
+
 .footer_logo {
     width: 250px;
     font-size: 55px;
     font-weight: 800;
 }
+

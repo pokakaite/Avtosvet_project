@@ -55,7 +55,7 @@ header {
     display: none;
 }
 
-a { 
+header a { 
     text-decoration: none;
     color: rgb(239, 239, 239);
 } 
@@ -64,3 +64,4 @@ a {
 .header_cart {
     margin-right: 2vw;
 }
+

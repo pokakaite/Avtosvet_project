@@ -6,7 +6,7 @@ class Type(models.Model):
     type = models.CharField('Тип лампы', max_length=50)
 
     def __str__(self) -> str:
-        return self.type
+        return f'{self.type}'
     
     def get_absolute_url(self):
         return 

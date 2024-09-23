@@ -8,6 +8,7 @@
     <link rel="stylesheet" href={% static 'source/css/header.css' %}>
     <link rel="stylesheet" href={% static 'source/css/footer.css' %}>
     <link rel="stylesheet" href={% static 'source/css/media.css' %}>
+    <link rel="stylesheet" href={% static 'source/css/catalog.css' %}>
     <link rel="stylesheet" href="css/media.css">
     <title>{{title}}</title>
 </head>
@@ -26,7 +27,7 @@
             <a href="{% url "main:index" %}">Главная</a>
         </div>
         <div class="header header_catalog">
-            <a href="{% url "catalog:index" %}">Каталог</a>
+            <div><a href="{% url "catalog:index" %}">Каталог</a></div>
         </div>
         <div class="header header_payment">
             Оплата и доставка

@@ -93,7 +93,7 @@
     }
 }
 
-@media(min-width: 1700px) {
+@media(min-width: 2700px) {
     footer {
         position: fixed;
         width: 100%;

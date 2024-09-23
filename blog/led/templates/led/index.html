@@ -1,0 +1,11 @@
+{% extends "main/layout.html" %}
+
+{% block content %}
+    {% for lamp in lamps %}
+    {% if lamp.type.id == 2%}
+        <div>
+            {{lamp.base}} {{lamp.type}}
+        </div>
+    {% endif %}
+    {% endfor %}
+{% endblock content %}
