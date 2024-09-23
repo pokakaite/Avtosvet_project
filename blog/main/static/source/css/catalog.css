@@ -24,12 +24,11 @@
     width: 180px;
     height: 180px;
     display: flex;
-    border: 1px black solid;
 }
 
 .lamp_image {
-    width: 60px;
-    height: 60px;
+    width: 180px;
+    height: 180px;
     margin: auto;
 }
 
