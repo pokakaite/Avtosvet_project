@@ -5,7 +5,17 @@
         <form method="POST" action="#">
             {% csrf_token %}
             <div class="form-group">
-                {{ form | crispy }}
+                {% for field in form %}
+                <div class="fieldWrapper">
+                    {{ field.errors }}
+                    {{ field.label_tag }} {{ field }}
+                    {% if field.help_text %}
+                        <p><small>
+                            {{ field.help_text }}
+                        </small></p>
+                    {% endif %}
+                </div>
+            {% endfor %}
             </div>
             <div class="form-group">
                 <button type="submit">

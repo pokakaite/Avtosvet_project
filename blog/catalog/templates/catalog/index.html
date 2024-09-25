@@ -2,7 +2,7 @@
 {% block content %}
 
 {% for type, i in types.items %}
-    <h1 class="main_title"><a href="{% url 'halogen:index' %}">{{type}}</a></h1>
+    <h1 class="main_title">{{type}}</h1>
     <div class="lamps_container">
         {% for lamp in lamps %}
             {% if lamp.type.id == i%}
