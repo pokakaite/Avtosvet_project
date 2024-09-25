@@ -6,7 +6,8 @@ from lamps.models import Lamp
 def index(request):
     model = Lamp.objects.all()
     cont = {
-        'main_title': 'Светодиодные лампы',
+        'types': {
+            'Светодиодные лампы': 2},
         'lamps': model
     }
-    return render(request, 'led/index.html', cont)
+    return render(request, 'catalog/index.html', cont)

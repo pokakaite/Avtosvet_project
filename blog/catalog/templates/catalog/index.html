@@ -1,11 +1,11 @@
 {% extends "main/layout.html" %}
 {% block content %}
 
-{% for type in types %}
-    <h1 class="main_title">{{type}}</h1>
+{% for type, i in types.items %}
+    <h1 class="main_title"><a href="{% url 'halogen:index' %}">{{type}}</a></h1>
     <div class="lamps_container">
         {% for lamp in lamps %}
-            {% if lamp.type.id == type.value%}
+            {% if lamp.type.id == i%}
                 <div class="one_lamp_container">
                     <div class="image_container">
                         <img class="lamp_image" src="{{lamp.image.url}}">
