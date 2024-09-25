@@ -50,11 +50,13 @@
         </div>
     </header>
 
-    <main class="item item_main">
-        <h1 class="main_title">
-            {{main_title}}
-        </h1>
-    {% block content %}{% endblock content %}
+    <main class="item item_main main">
+        {% if main_title %}
+            <h1 class="main_title">
+                {{main_title}}
+            </h1>
+        {% endif %}
+        {% block content %}{% endblock content %}
     </main>
 
     {% if messages %}

@@ -7,6 +7,7 @@ def index(request):
     model = Lamp.objects.all()
     cont = {
         'main_title': 'Галогенные лампы',
-        'lamps': model
+        'lamps': model,
+        'type_id': 1
     }
-    return render(request, 'halogen/index.html', cont)
+    return render(request, 'catalog/index.html', cont)

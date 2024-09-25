@@ -3,7 +3,7 @@
 {% block content %}
 <div class="lamps_container">
     {% for lamp in lamps %}
-        {% if lamp.type.id == 1%}
+        {% if lamp.type.id == type_id%}
             <div class="one_lamp_container">
                 <div class="image_container">
                     <img class="lamp_image" src="{{lamp.image.url}}">

@@ -39,7 +39,7 @@ body {
     background-color: rgb(221, 221, 221);
 }
 
-main {
+.main {
     color: rgb(29, 39, 50);
     width: 100%;
     grid-column: 1 / 11;
