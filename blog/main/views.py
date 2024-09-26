@@ -16,6 +16,7 @@ def index(request):
 def brand_auto(request, brand_slug):
     brand_autos = get_object_or_404(BrandAuto, slug=brand_slug)
     cont = {
-        'brand_autos': brand_autos
+        'brand_autos': brand_autos,
+        'choose_model': 'Модели автомобиля',
     }
     return render(request, 'main/brand_auto.html', cont)

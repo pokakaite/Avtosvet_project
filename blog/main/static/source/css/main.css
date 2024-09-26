@@ -64,3 +64,12 @@ body {
     padding: 10px 0 10px 15px;
     text-align: start;
 }
+
+.car_url {
+    text-decoration: none;
+    color: rgb(29, 39, 50);
+}
+
+.car_url:hover {
+    text-decoration: underline;
+}
