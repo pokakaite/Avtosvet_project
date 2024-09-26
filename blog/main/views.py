@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from brand_autos.models import BrandAuto
 
 # Create your views here.
@@ -12,3 +12,10 @@ def index(request):
         'brand_autos': brand_autos
     }
     return render(request, 'main/index.html', cont)
+
+def brand_auto(request, brand_slug):
+    brand_autos = get_object_or_404(BrandAuto, slug=brand_slug)
+    cont = {
+        'brand_autos': brand_autos
+    }
+    return render(request, 'main/brand_auto.html', cont)

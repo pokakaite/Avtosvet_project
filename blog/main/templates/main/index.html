@@ -2,14 +2,14 @@
 
 {% block content %}
 
-        {% comment %} <div class="cars">
+        <div class="cars">
             {% for brand in brand_autos %}
             <div class="cars_column">
-                <div class="car">{{brand}}</div>
+                <div class="car"><a href="{{ brand.get_absolute_url }}">{{brand}}</a></div>
             </div>
             {% endfor %}
-        </div> {% endcomment %}
-        <div class="cars">
+        </div>
+        {% comment %} <div class="cars">
             <div class="car car_1">Acura</div>
             <div class="car car_2">Alfa Romeo</div>
             <div class="car car_3">Audi</div>
@@ -63,5 +63,5 @@
             <div class="car car_51">ТагАЗ</div>
             <div class="car car_52">ГАЗ</div>
             <div class="car car_53">УАЗ</div>
-        </div>
+        </div> {% endcomment %}
 {% endblock content %}
