@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'colors',
     'carcases',
     'brand_autos',
+    'models_autos',
     'brand_lamps',
     'lamps',
     'lamp_bases',

@@ -73,3 +73,8 @@ body {
 .car_url:hover {
     text-decoration: underline;
 }
+
+.car_model {
+    font-size: 30px;
+    font-weight: 700;
+}

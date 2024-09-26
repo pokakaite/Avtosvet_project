@@ -5,5 +5,21 @@
         <h1 class="main_title">
             {{choose_model}} {{brand_autos.name}}
         </h1>
+        <div>
+            {% for model in models_autos %}
+                <div class="car_model">
+                    {{model}}
+                </div>
+                {% if model.brand == brand_autos.name %}
+                    <div>
+                        {% for carcase in carcases %}
+                            {% if carcase.model == model.name%}
+                                {{carcase}} {{carcase.year}}<br>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
     </main>
 {% endblock content %}
