@@ -4,5 +4,5 @@ from .views import *
 app_name = 'carcases'
 
 urlpatterns = [
-    path('<slug:carcase_slug>', carcase, name='carcase')
+    path('<slug:model_slug>/<slug:carcase_slug>', carcase, name='carcase')
 ]

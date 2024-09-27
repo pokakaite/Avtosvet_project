@@ -2,9 +2,11 @@
 
 {% block content %}
     <main class="item item_main main brands_to_models">
-        <h1 class="main_title">
-            {% comment %} {{choose_model}} {{brand_autos.name}} {% endcomment %}
-        </h1>
-        
+        {% for place in places %}
+            {{place}} <br>
+            {% for type in types %}
+                {{type}}
+            {% endfor %}
+        {% endfor %}    
     </main>
 {% endblock content %}
