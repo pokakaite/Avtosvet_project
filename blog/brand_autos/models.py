@@ -11,7 +11,7 @@ class BrandAuto(models.Model):
         return self.name
     
     def get_absolute_url(self):
-        return reverse('main:brand_auto', kwargs={'brand_slug': self.slug})
+        return reverse('brand_autos:brand_auto', kwargs={'brand_slug': self.slug})
     
     class Meta:
         db_table: str = 'brand_auto'

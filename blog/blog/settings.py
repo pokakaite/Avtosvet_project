@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'halogen',
     'led',
     'xenon',
+    'places',
     'crispy_forms',
     'crispy_bootstrap5',
     'django.contrib.admin',

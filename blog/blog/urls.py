@@ -22,6 +22,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls, name='admin'),
     path('', include('main.urls', namespace='main')),
+    path('brands_autos/', include('brand_autos.urls', namespace='brand_autos')),
+    path('brands_autos/<slug:brand_slug>/', include('carcases.urls', namespace='carcases')),
     path('user/', include('users.urls', namespace='users')),
     path('catalog/', include('catalog.urls', namespace='catalog')),
     path('catalog/halogen/', include('halogen.urls', namespace='halogen')),

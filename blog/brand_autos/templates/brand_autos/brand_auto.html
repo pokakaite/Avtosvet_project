@@ -1,0 +1,32 @@
+{% extends "main/layout.html" %}
+
+{% block content %}
+    <main class="item item_main main brands_to_models">
+        <h1 class="main_title">
+            {{choose_model}} {{brand_autos.name}}
+        </h1>
+        <div>
+            {% for model in models_autos %}
+                {% if model.brand.id == brand_autos.id %}
+                        <div class="car_model">
+                            {{model}}
+                        </div>
+                        <div>
+                            {% for carcase in carcases %}
+                                {% if carcase.model.id == model.id%}
+                                <div>
+                                    <a href="{{carcase.slug}}">
+                                        <div class="image_container">
+                                            <img class="lamp_image" src="{{carcase.image.url}}">
+                                        </div>
+                                        {{carcase}} {{carcase.year}}<br>
+                                    </a>
+                                </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </main>
+{% endblock content %}
