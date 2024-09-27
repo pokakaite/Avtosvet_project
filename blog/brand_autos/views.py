@@ -12,7 +12,7 @@ def brand_auto(request, brand_slug):
     
     cont = {
         'brand_autos': brand_autos,
-        'main_title': 'Подбор ламп по авто',
+        'title': 'Лампы для',
         'models_autos': models_autos,
         'carcases': carcases,
     }

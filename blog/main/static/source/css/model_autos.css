@@ -1,0 +1,29 @@
+.model_container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 80vw;
+    margin: auto;
+}
+
+.car_model {
+    font-size: 25px;
+    font-weight: 700;
+    text-align: left;
+    margin: 30px 0 5px 10vw;
+}
+
+.carcase_image_container {
+    width: 150px;
+    height: 150px;
+}
+
+.carcase_image {
+    margin: auto;
+    width: 150px;
+}
+
+.carcase_url {
+    text-decoration: none;
+    color: rgb(29, 39, 50);
+    font-weight: 700;
+}

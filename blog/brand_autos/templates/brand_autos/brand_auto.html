@@ -2,28 +2,35 @@
 
 {% block content %}
     <main class="item item_main main brands_to_models">
-        <div>
+        <h1 class="main_title">
+            {{title}} {{brand_autos.name}}
+        </h1>
             {% for model in models_autos %}
+                <div>
                 {% if model.brand.id == brand_autos.id %}
                         <div class="car_model">
                             {{model}}
                         </div>
-                        <div>
+                        <div class="model_container">
                             {% for carcase in carcases %}
                                 {% if carcase.model.id == model.id%}
                                 <div>
-                                    <a href="{{model.slug}}/{{carcase.slug}}">
-                                        <div class="image_container">
-                                            <img class="lamp_image" src="{{carcase.image.url}}">
+                                    <a class="carcase_url" href="{{model.slug}}/{{carcase.slug}}">
+                                        <div class="image_container carcase_image_container">
+                                            <img class="carcase_image" src="{{carcase.image.url}}">
                                         </div>
-                                        {{carcase}} {{carcase.year}}<br>
+                                        <div>
+                                            <div>
+                                                {{carcase}} {{carcase.year}}
+                                            </div>
+                                        </div>
                                     </a>
                                 </div>
                                 {% endif %}
                             {% endfor %}
                         </div>
                 {% endif %}
+                </div>
             {% endfor %}
-        </div>
     </main>
 {% endblock content %}

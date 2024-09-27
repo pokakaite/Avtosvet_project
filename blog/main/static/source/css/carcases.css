@@ -1,0 +1,50 @@
+.places_container {
+    width: 85vw;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: auto;
+}
+
+.place_container {
+    margin: auto;
+    margin-top: 20px;
+    width: 260px;
+    height: 170px;
+}
+
+.place_name_container {
+    width: fit-content;
+    height: 30px;
+    font-weight: 700;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.place_image {
+    height: 30px;
+    width: 30px;
+}
+
+.place_name {
+    width: fit-content;
+    text-wrap: nowrap;
+    padding: 5px 0 0 10px;
+}
+
+.types_container {
+    display: block;
+}
+
+.type_container {
+    text-align: start;
+}
+
+.type_url {
+    font-size: 17px;
+    text-decoration: none;
+    color: rgba(29, 39, 50, 0.815);
+}
+
+.type_url:hover {
+    text-decoration: underline;
+}

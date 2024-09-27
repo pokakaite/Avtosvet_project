@@ -2,11 +2,35 @@
 
 {% block content %}
     <main class="item item_main main brands_to_models">
-        {% for place in places %}
-            {{place}} <br>
-            {% for type in types %}
-                {{type}}
+        <div class="places_container">
+            {% for cp in carcases_places %}
+                {% if cp.carcase.id == carcases.id %}
+                    <div class="place_container">
+                        {% for place in places %}
+                            {% if place.id == cp.places.id %}
+                                <div class="place_name_container">
+                                    <img class="place_image" src="{{place.image.url}}" alt=""> 
+                                    <div class="place_name">
+                                        {{cp.places}}
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+
+                        <div class="types_container">
+                        {% for pt in places_types %}
+                            {% if cp.places.id == pt.place.id %}
+                            <li class="type_container">
+                                <a class="type_url" href="#">
+                                    {{pt.types}}
+                                </a>
+                            </li>
+                            {% endif %}
+                        {% endfor %}
+                        </div>
+                    </div>
+                {% endif %}
             {% endfor %}
-        {% endfor %}    
+        </div>
     </main>
 {% endblock content %}
