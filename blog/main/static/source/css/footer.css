@@ -38,10 +38,17 @@ footer {
     filter: drop-shadow(0 0 5px rgb(2, 255, 2));
 }
 
-.vk:hover {
-    filter: drop-shadow(0 0 5px rgb(0, 94, 255));
+.gis:hover {
+    filter: drop-shadow(0 0 5px rgb(2, 255, 2));
 }
 
+.yandex {
+    width: 28px;
+}
+
+.yandex:hover {
+    filter: drop-shadow(0 0 5px rgb(255, 255, 255));
+}
 
 .footer_at {
     margin-top: 10px;

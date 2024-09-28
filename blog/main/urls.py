@@ -5,4 +5,5 @@ app_name = 'main'
 
 urlpatterns = [
     path('', index, name='index'),
+    path('payment/', payment, name='payment')
 ]

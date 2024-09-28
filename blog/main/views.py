@@ -1,7 +1,5 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
 from brand_autos.models import BrandAuto
-from models_autos.models import ModelAuto
-from carcases.models import Carcase
 
 # Create your views here.
 
@@ -13,3 +11,9 @@ def index(request):
         'brand_autos': brand_autos
     }
     return render(request, 'main/index.html', cont)
+
+def payment(request):
+    cont = {
+        'main_title': 'Оплата и доставка'
+    }
+    return render(request, 'main/payment.html', cont)

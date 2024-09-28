@@ -11,6 +11,7 @@
     <link rel="stylesheet" href={% static 'source/css/catalog.css' %}>
     <link rel="stylesheet" href={% static 'source/css/model_autos.css' %}>
     <link rel="stylesheet" href={% static 'source/css/carcases.css' %}>
+    <link rel="stylesheet" href={% static 'source/css/payment.css' %}>
     <link rel="stylesheet" href="css/media.css">
     <title>{{title}}</title>
 </head>
@@ -32,7 +33,7 @@
             <div><a href="{% url "catalog:index" %}">Каталог</a></div>
         </div>
         <div class="header header_payment">
-            Оплата и доставка
+            <div><a href="{% url "main:payment" %}">Оплата и доставка</a></div>
         </div>
         <div class="header header_search">
             <input class="search" type="search" placeholder="Что ищете?">
@@ -76,20 +77,29 @@
             </div>
             <div class="footer footer_crumbles">
                 <div>
-                    <img class="icon vk" src="{% static 'source/img/vk.svg' %}" alt="">
+                    <a href="https://link.2gis.ru/4.2/835C5A71/aHR0cHM6Ly93YS5tZS83OTYwODAyOTIyMj90ZXh0PSVEMCU5NyVEMCVCNCVEMSU4MCVEMCVCMCVEMCVCMiVEMSU4MSVEMSU4MiVEMCVCMiVEMSU4MyVEMCVCOSVEMSU4MiVEMCVCNSElMEElMEElRDAlOUYlRDAlQjglRDElODglRDElODMlMjAlRDAlQjglRDAlQjclMjAlRDAlQkYlRDElODAlRDAlQjglRDAlQkIlRDAlQkUlRDAlQjYlRDAlQjUlRDAlQkQlRDAlQjglRDElOEYlMjAyJUQwJTkzJUQwJTk4JUQwJUExLiUwQSUwQQpodHRwczovL3MxLmJzcy4yZ2lzLmNvbS9ic3MvMwpbeyJjb21tb24iOnsiZm9ybWF0VmVyc2lvbiI6MywiYXBwVmVyc2lvbiI6IjIwMjQtMDktMjctMTUiLCJwcm9kdWN0IjozNCwiYXBpa2V5IjoicnVyYmJuMzQ0NiIsImFwaWtleVN0YXR1cyI6MSwidXNlciI6IjFiNjM5OWMyLTU4YWEtNGI0Yi1iNzRiLWY1NjdkMDdhM2I5NCIsImlwIjoiMTc4LjIxNC4yNDkuOCIsInNlc3Npb25JZCI6IjE0NGMyY2VhLWMwYTAtNDBiOC05ODIxLTg2OTIyYWFlN2JjYSIsInVzZXJBZ2VudCI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xMjcuMC4wLjAgU2FmYXJpLzUzNy4zNiBPUFIvMTEzLjAuMC4wIiwiZGV2aWNlVHlwZSI6ImRlc2t0b3AiLCJwZXJzb25hbERhdGFDb2xsZWN0aW9uQWxsb3dlZCI6dHJ1ZSwidGFiSXNBY3RpdmUiOnRydWV9LCJ1dGNPZmZzZXQiOiIrMDU6MDAiLCJ0YWJJZCI6ImJjN2VhZTVkLWVlMDgtNDZlYi1iYzBlLWFlNzIxNTZiMGU5YSIsInRpbWVzdGFtcCI6MTcyNzU0NzMxMzg2NiwidHlwZSI6MjExLCJldmVudFR5cGUiOiJhY3Rpb24iLCJldmVudElkIjoiNDZlZGRiMGItZDhkYy00NDhmLWFlMDctYjVmYjQ1YmNhZjE4IiwiYWN0aW9uVHlwZSI6ImV4dGVybmFsTGluayIsImV2ZW50T3JkaW5hbCI6MCwidWlFbGVtZW50Ijp7Im5hbWUiOiJjb250YWN0Iiwib3duZXJOYW1lIjoiY2FyZENvbnRhY3RzIiwicG9zaXRpb24iOjIsImZyYW1lVXVpZCI6IjE0NDgzYWZjLTYyNjAtNDBhZi05NDFjLWI5MTgyZDkzOGUwYyJ9LCJwYXlsb2FkIjp7ImNvbnRhY3QiOnsidmFsdWUiOiJodHRwczovL3dhLm1lLzc5NjA4MDI5MjIyP3RleHQ9JUQwJTk3JUQwJUI0JUQxJTgwJUQwJUIwJUQwJUIyJUQxJTgxJUQxJTgyJUQwJUIyJUQxJTgzJUQwJUI5JUQxJTgyJUQwJUI1ISUwQSUwQSVEMCU5RiVEMCVCOCVEMSU4OCVEMSU4MyUyMCVEMCVCOCVEMCVCNyUyMCVEMCVCRiVEMSU4MCVEMCVCOCVEMCVCQiVEMCVCRSVEMCVCNiVEMCVCNSVEMCVCRCVEMCVCOCVEMSU4RiUyMDIlRDAlOTMlRDAlOTglRDAlQTEuJTBBJTBBIiwidHlwZSI6IndoYXRzYXBwIiwicG9zaXRpb24iOjJ9LCJwbGFjZUl0ZW0iOnsiZW50aXR5Ijp7ImlkIjoiNzYwMDM1MzY1MjY2ODc0NiIsInR5cGUiOiJicmFuY2giLCJzZWdtZW50SW5mbyI6eyJiYXNlTG9jYWxlIjoicnVfUlUiLCJzZWdtZW50SWQiOiI1NCJ9fSwiZ2VvUG9zaXRpb24iOnsibG9uIjo1NS45MjY4ODgsImxhdCI6NTMuNjM5Nzc3fSwibWFpblJ1YnJpYyI6IjQyNSIsImlzRGVsZXRlZCI6ZmFsc2UsIm9yZyI6IjcwMDAwMDAxMDQwNTUwMTM3In0sImV4dGVybmFsTGluayI6eyJmb3JrRXZlbnRPcmRpbmFsIjo4LCJwYXJlbnRUYWJJZCI6IjIwY2U5MDE5LTUwMDQtNDlhYS04MzUzLTY1YTdlZDhjZGI5OCJ9fSwiYWJUZXN0IjpbeyJuYW1lIjoibmV3TWFya2VycyIsInZhbHVlIjoiYmx1ZVN0cm9rZV8xIn0seyJuYW1lIjoibGF1bmNoTW9iaWxlUG9wdXAiLCJ2YWx1ZSI6ImxhdW5jaFNpbXBsZVBvcHVwXzEifV0sInNjcmVlblN0YXRlIjp7Im9yaWVudGF0aW9uIjoiaG9yaXpvbnRhbCIsInNjcmVlblJlc29sdXRpb24iOnsid2lkdGgiOjEyODAsImhlaWdodCI6NzIwfSwid2luZG93UmVzb2x1dGlvbiI6eyJ3aWR0aCI6MTI3OCwiaGVpZ2h0Ijo1NTJ9fSwidXNlclNldHRpbmdzIjp7Im1hcCI6eyJlZmZlY3RzTGV2ZWwiOiJkZWZhdWx0In19fV0%3D">
+                        <img class="icon whatsapp" src="{% static 'source/img/whatsapp.svg' %}" alt="whatsapp">
+                    </a>
                 </div>
                 <div>
-                    <img class="icon whatsapp" src="{% static 'source/img/whatsapp.svg' %}" alt="">
+                    <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjYiOrYn-aIAxVuIRAIHTkKKYwQFnoECBgQAQ&url=https%3A%2F%2Fyandex.ru%2Fmaps%2Forg%2Favtosvet_na_ulitse_nikolayeva_2%2F1230701365%2F&usg=AOvVaw0PD-dMwOdtzdPU06W0FNi8&opi=89978449">
+                        <img class="icon yandex" src="{% static 'source/img/yandex.svg' %}" alt="yandex">
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjj0vyIoOaIAxUHExAIHSiPOe0QFnoECBMQAQ&url=https%3A%2F%2F2gis.ru%2Fsterlitamak%2Ffirm%2F7600353652668746&usg=AOvVaw0Sk07iJELuLwxiYuZjb7Fg&opi=89978449">
+                        <img class="icon gis" src="{% static 'source/img/gis.svg' %}" alt="2gis">
+                    </a>
                 </div>
             </div>
             <div class="footer footer_at">@2024 Автосвет</div>
         </div>
 
         <div class="footer_section2">
-            <div class="footer footer_main">Главная</div>
-            <div class="footer footer_payment">Оплата и доставка</div>
+            <div class="footer footer_main"><a href="{% url "main:index" %}">Главная</a></div>
+            <div class="footer footer_payment"><a href="{% url "main:payment" %}">Оплата и доставка</a></div>
             <div class="footer footer_support">Поддержка</div>
-            <div class="footer footer_profile">Профиль</div>
+            <div class="footer footer_profile"><a href="{% url "users:register" %}">Профиль</a></div>
         </div>
         
         <div class="footer_section3">
