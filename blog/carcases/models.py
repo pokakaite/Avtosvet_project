@@ -24,5 +24,5 @@ class Carcase(models.Model):
         verbose_name_plural = 'Кузов'
 
 class CarcasePlace(models.Model):
-    places = models.ForeignKey(Place, on_delete=models.CASCADE)
     carcase = models.ForeignKey(Carcase, related_name="places", on_delete=models.CASCADE)
+    places = models.ForeignKey(Place, on_delete=models.CASCADE)

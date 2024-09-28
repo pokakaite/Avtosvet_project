@@ -1,6 +1,5 @@
 from django.db import models
 from brand_autos.models import BrandAuto
-from lamps.models import Lamp
 # from places.models import Place
 
 # Create your models here.

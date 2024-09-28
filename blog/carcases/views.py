@@ -2,8 +2,9 @@ from django.shortcuts import render, get_object_or_404
 from brand_autos.models import BrandAuto
 from models_autos.models import ModelAuto
 from carcases.models import Carcase
-from places.models import Place, PlaceType
+from places.models import Place
 from lamp_types.models import Type
+from lamps.models import Lamp, PlaceLamp
 from .models import CarcasePlace
 
 # Create your views here.
@@ -14,8 +15,9 @@ def carcase(request, carcase_slug, brand_slug, model_slug):
     models_autos = ModelAuto.objects.all()
     places = Place.objects.all()
     types = Type.objects.all()
-    places_types = PlaceType.objects.all()
-    carcases_places = CarcasePlace.objects.all()
+    lamps_places = PlaceLamp.objects.all()
+    lamps = Lamp.objects.order_by('type')
+    carcases_places = CarcasePlace.objects.order_by('places')
     for model_auto in models_autos:
         for carcase in carcases_obj:
             if carcase.model == model_auto.name:
@@ -31,7 +33,8 @@ def carcase(request, carcase_slug, brand_slug, model_slug):
         'model_slug': model_slug,
         'places': places,
         'types': types,
-        'places_types': places_types,
+        'lamps_places': lamps_places,
+        'lamps': lamps,
         'carcases_places': carcases_places
     }
     return render(request, 'carcases/carcase.html', cont)

@@ -3,34 +3,149 @@
 {% block content %}
     <main class="item item_main main brands_to_models">
         <div class="places_container">
-            {% for cp in carcases_places %}
-                {% if cp.carcase.id == carcases.id %}
-                    <div class="place_container">
-                        {% for place in places %}
-                            {% if place.id == cp.places.id %}
+            {% for place in places %}
+                {% for carcase in carcases_places %}
+                    {% if carcase.carcase.id == carcases.id %}
+                        {% if carcase.places.id == place.id %}
+                            <div class="place_container">
                                 <div class="place_name_container">
                                     <img class="place_image" src="{{place.image.url}}" alt=""> 
                                     <div class="place_name">
-                                        {{cp.places}}
+                                        {{carcase.places}}
                                     </div>
                                 </div>
-                            {% endif %}
-                        {% endfor %}
+                                {% comment %} <li class="type_container">
+                                    <a class="type_url" href="#">
+                                        {{lamp.type}}
+                                    </a>
+                                </li> {% endcomment %}
+                            </div>
 
-                        <div class="types_container">
-                        {% for pt in places_types %}
-                            {% if cp.places.id == pt.place.id %}
-                            <li class="type_container">
+                            
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+
+                            {% comment %} <li class="type_container">
                                 <a class="type_url" href="#">
-                                    {{pt.types}}
+                                    {{lamp.type}}
                                 </a>
-                            </li>
-                            {% endif %}
-                        {% endfor %}
-                        </div>
-                    </div>
-                {% endif %}
+                            </li> {% endcomment %}
             {% endfor %}
+            {% comment %} {% for car_place in carcases_places %}
+                {% for place_lamp in places_lamps %}
+                    {% if car_place.carcase.id == carcases.id %}
+                        {% if car_place.places.id == place_lamp.places.id %}
+                            {% for place in places %}
+                            <div class="place_container">
+                                <div class="place_name_container">
+                                    <img class="place_image" src="{{cl.places.image.url}}" alt=""> 
+                                    <div class="place_name">
+                                        {{place}}
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+            {% endfor %} {% endcomment %}
+
+            {% comment %} {% for carcase in carcases_obj %}
+                {% for lamp in lamps %}
+                    {% if lamp.places.id == carcase.places.id %}
+                        {% if lamp.carcase.id == carcases.id %}
+                            lol
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+            {% endfor %} {% endcomment %}
+
+
+
+
+
+
+
+
+            {% comment %} {% for lamp in lamps %}
+                {% for cl in carcases_lamps %}
+                    {% if lamp.id == cl.lamps.id %}
+                        lol
+                    {% endif %}
+                {% endfor %}
+            {% endfor %} {% endcomment %}
+            {% comment %} {% for cl in carcases_lamps %}
+                {% if cl.carcase.id == carcases.id %}
+                    {% for place in places %}
+                        {% if cl.places.id == place.id %}
+                        <div class="place_container">
+                            <div class="place_name_container">
+                                <img class="place_image" src="{{cl.places.image.url}}" alt=""> 
+                                <div class="place_name">
+                                    {{cl.places}}
+                                </div>
+                            </div>
+                            {% for lamp in lamps %}
+                                {% if lamp.id == cl.lamps.id%}
+                                    <div class="types_container">
+                                        <li class="type_container">
+                                            <a class="type_url" href="#">
+                                                {{lamp.type}}
+                                            </a>
+                                        </li>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+
+                        {% endif %}
+                    {% endfor %} {% endcomment %}
+                    {% comment %} <div class="place_container">
+                        <div class="place_name_container">
+                            <img class="place_image" src="{{cl.places.image.url}}" alt=""> 
+                            <div class="place_name">
+                                {{cl.places}}
+                            </div>
+                        </div>
+                        {% for lamp in lamps %}
+                            {% if lamp.id == cl.lamps.id%}
+                                <div class="types_container">
+                                    <li class="type_container">
+                                        <a class="type_url" href="#">
+                                            {{lamp.type}}
+                                        </a>
+                                    </li>
+                                </div>
+                            {% endif %}
+                        {% endfor %} {% endcomment %}
+                            {% comment %} {% for cl in carcases_lamps %}
+                                {% if carcases.id == cl.carcase.id %}
+                                    {% if carcases.lamp.id == cl.lamp.id %}
+                                        {% for lamp in lamps %}
+                                            <li class="type_container">
+                                                <a class="type_url" href="#">
+                                                    {{lamp.type}}
+                                                </a>
+                                            </li>
+                                        {% endfor %}
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %} {% endcomment %}
+                            {% comment %} {% for lamp in lamps %}
+                                {% for cl in carcases_lamps %}
+                                    {% if cl.carcase.id == carcases.id %}
+                                        {% if lamp.type == cl.lamps %}
+                                            <li class="type_container">
+                                                <a class="type_url" href="#">
+                                                    {{lamp.type}}
+                                                </a>
+                                            </li>
+                                        {% endif %}
+                                    {% endif %}
+                                {% endfor %}
+                            {% endfor %} {% endcomment %}
+                {% comment %} {% endif %}
+            {% endfor %} {% endcomment %}
         </div>
     </main>
 {% endblock content %}

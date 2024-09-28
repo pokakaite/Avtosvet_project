@@ -7,6 +7,8 @@ from length.models import Length
 from brand_lamps.models import BrandLamp
 from colors.models import Color
 from amount_types.models import AmountType
+from carcases.models import Carcase
+from places.models import Place
 
 # Create your models here.
 
@@ -34,3 +36,8 @@ class Lamp(models.Model):
         db_table: str = 'lamp'
         verbose_name = 'Лампу'
         verbose_name_plural = 'Лампы'
+
+class PlaceLamp(models.Model):
+    places = models.ForeignKey(Place, on_delete=models.CASCADE)
+    lamp = models.ForeignKey(Lamp, related_name="places", on_delete=models.CASCADE)
+    carcase = models.ForeignKey(Carcase, on_delete=models.CASCADE)

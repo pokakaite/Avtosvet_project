@@ -1,5 +1,6 @@
 from django.db import models
-from lamp_types.models import Type
+# from lamps.models import Lamp
+# from carcases.models import Carcase
 
 # Create your models here.
 
@@ -18,8 +19,4 @@ class Place(models.Model):
         db_table: str = 'place'
         verbose_name = 'Место'
         verbose_name_plural = 'Места'
-
-class PlaceType(models.Model):
-    place = models.ForeignKey(Place, related_name="type", on_delete=models.CASCADE)
-    types = models.ForeignKey(Type, on_delete=models.CASCADE)
 
