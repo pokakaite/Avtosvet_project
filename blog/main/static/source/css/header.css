@@ -50,19 +50,19 @@ header {
     margin: auto;
     margin-top: 5px;
     width: 25px;
-    filter: invert();
 }
 
 .header_search_icon {
     margin-left: -40px;
 }
 
-.search_icon {
-    filter: none;
+.icon_cart, .icon_profile, .icon_menu{
+    filter: invert();
 }
 
 .icon_menu {
     display: none;
+    cursor: pointer;
 }
 
 header a { 

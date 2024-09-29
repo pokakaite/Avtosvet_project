@@ -34,6 +34,10 @@ footer {
     margin-top: 10px;
 }
 
+.whatsapp, .yandex, .gis {
+    filter: invert();
+}
+
 .whatsapp:hover {
     filter: drop-shadow(0 0 5px rgb(2, 255, 2));
 }

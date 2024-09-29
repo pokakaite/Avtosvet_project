@@ -1,0 +1,71 @@
+menu {
+    display: none;
+    width: 30vw;
+    position: absolute;
+    z-index: 2;
+    margin-top: 0;
+    margin-left: -40px;
+    font-size: 5vh;
+    background-color: rgb(185, 185, 185);
+}
+
+.menu_title {
+    align-items: center;
+    height: 15vh;
+    width: 29.5vw;
+    display: flex;
+    text-align: start;
+    background-color: rgb(185, 185, 185);
+    font-weight: bold;
+    cursor: pointer;
+    margin: auto;
+}
+
+.menu_name {
+    color: rgb(29, 39, 50);
+    width: 25vw;
+    margin-left: 2.5vw;
+}
+
+.menu_nav {
+    height: 15vh;
+    width: 29.5vw;
+    color: rgb(29, 39, 50);
+    background-color: rgb(221, 221, 221);
+    display: flex;
+    margin: auto;
+    margin-top: 0.5vh;
+}
+
+.menu_nav_main {
+    margin-top: 0;
+}
+
+.menu_nav_cart {
+    margin-bottom: 0.5vh;
+}
+
+.menu_nav_text {
+    width: auto;
+    margin: auto;
+    margin-left: 2.5vw;
+}
+
+.menu_url {
+    text-decoration: none;
+    color: rgb(29, 39, 50);
+}
+
+.menu_url:hover {
+    text-decoration: underline;
+}
+
+.close {
+    width: 5vw;
+}
+
+.icon_close {
+    width: 2vw;
+    margin-top: 1vw;
+}
+

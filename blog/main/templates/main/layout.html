@@ -12,6 +12,7 @@
     <link rel="stylesheet" href={% static 'source/css/model_autos.css' %}>
     <link rel="stylesheet" href={% static 'source/css/carcases.css' %}>
     <link rel="stylesheet" href={% static 'source/css/payment.css' %}>
+    <link rel="stylesheet" href={% static 'source/css/menu.css' %}>
     <link rel="stylesheet" href="css/media.css">
     <title>{{title}}</title>
 </head>
@@ -22,7 +23,7 @@
         <div class="header header_logo">
             <a href="{% url "main:index" %}">АВТОСВЕТ</a>
         </div>
-        <div class="header icon_menu">
+        <div class="header icon_menu" id="icon_menu">
             <img class="icon" src="{% static 'source/img/menu.svg' %}" alt="">
         </div>
         
@@ -43,15 +44,40 @@
         </div>
         <div class="header header_profile">
             <a href="{% url "users:register" %}">
-                <img class="icon" src="{% static 'source/img/profile.svg' %}" alt="Вход или регистрация">
+                <img class="icon icon_profile" src="{% static 'source/img/profile.svg' %}" alt="Вход или регистрация">
             </a>    
         </div>
         <div class="header header_cart">
             <a href="{% url "cart:index" %}">
-                <img class="icon" src="{% static 'source/img/cart.svg' %}" alt="">
+                <img class="icon icon_cart" src="{% static 'source/img/cart.svg' %}" alt="">
             </a>
         </div>
     </header>
+
+    <menu id="menu">
+        <div class="menu_title" id="menu_title">
+            <div class="menu_name" id="close">Навигация</div>
+            <div class="close"><img class="icon icon_close" src={% static 'source/img/close2.svg' %} alt="Закрыть"></div>
+        </div>
+        <div class="menu_nav menu_nav_main"><div class="menu_nav_text"><a class="menu_url" href="{% url "main:index" %}">Главная</a></div></div>
+        <div class="menu_nav"><div class="menu_nav_text"><a class="menu_url" href="{% url "catalog:index" %}">Каталог</a></div></div>
+        <div class="menu_nav"><div class="menu_nav_text"><a class="menu_url" href="{% url "main:payment" %}">Оплата и доставка</a></div></div>
+        <div class="menu_nav"><div class="menu_nav_text"><a class="menu_url" href="#">Поиск</a></div></div>
+        <div class="menu_nav"><div class="menu_nav_text"><a class="menu_url" href="{% url "users:register" %}">Профиль</a></div></div>
+        <div class="menu_nav menu_nav_cart"><div class="menu_nav_text"><a class="menu_url" href="{% url "cart:index" %}">Корзина</a></div></div>
+    </menu>
+
+    <script>
+        icon_menu.addEventListener('click',
+            function (e) {
+                menu.style.display = 'block';
+            });
+
+        menu_title.addEventListener('click',
+            function (e) {
+                menu.style.display = 'none';
+            })
+    </script>
 
     <main class="item item_main main">
         {% if main_title %}
