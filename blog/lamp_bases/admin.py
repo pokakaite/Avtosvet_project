@@ -1,6 +1,13 @@
 from django.contrib import admin
-from .models import LampBase
+from .models import LampBase, PlaceLamp
 
 # Register your models here.
 
-admin.site.register(LampBase)
+class PlaceInline(admin.TabularInline):
+    model = PlaceLamp
+
+class LampAdmin(admin.ModelAdmin):
+    fields = ['name', 'watts']
+    inlines = [PlaceInline]
+
+admin.site.register(LampBase, LampAdmin)

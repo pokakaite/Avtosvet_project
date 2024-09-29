@@ -6,16 +6,18 @@ menu {
     margin-top: 0;
     margin-left: -40px;
     font-size: 5vh;
-    background-color: rgb(185, 185, 185);
+    background-color: rgb(149, 149, 149);
 }
 
 .menu_title {
     align-items: center;
     height: 15vh;
-    width: 29.5vw;
+    width: 29vw;
     display: flex;
     text-align: start;
     background-color: rgb(185, 185, 185);
+    background-color: rgb(149, 149, 149);
+
     font-weight: bold;
     cursor: pointer;
     margin: auto;
@@ -29,12 +31,11 @@ menu {
 
 .menu_nav {
     height: 15vh;
-    width: 29.5vw;
-    color: rgb(29, 39, 50);
+    width: 29vw;
     background-color: rgb(221, 221, 221);
     display: flex;
     margin: auto;
-    margin-top: 0.5vh;
+    margin-top: 1vh;
 }
 
 .menu_nav_main {
@@ -42,7 +43,7 @@ menu {
 }
 
 .menu_nav_cart {
-    margin-bottom: 0.5vh;
+    margin-bottom: 1vh;
 }
 
 .menu_nav_text {

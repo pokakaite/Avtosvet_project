@@ -22,7 +22,7 @@ def main():
     # with open('brand_autos.txt', encoding='utf-8') as f:
     #     for s in map(str.strip, f.readlines()):
     #         try:
-    #             obj = BrandAuto.objects.create(name=s, slug=s)
+    #             obj = BrandAuto.objects.create(name=s)
     #             obj.save()
     #         except BaseException as e:
     #             print(e)

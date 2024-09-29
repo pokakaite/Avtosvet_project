@@ -2,6 +2,9 @@
 
 {% block content %}
     <main class="item item_main main brands_to_models">
+        <h1 class="main_title">
+            {{title}} {{carcases.model.brand}} {{carcases.model}} {{carcases.name}}
+        </h1>
         <div class="places_container">
             {% for place in places %}
                 {% for carcase in carcases_places %}
@@ -14,6 +17,46 @@
                                         {{carcase.places}}
                                     </div>
                                 </div>
+
+                                {% comment %} {% for lamp in lamp_bases %}
+                                    {% for lamp_place in lamps_places %}
+                                        {% if lamp.id == lamp_place.lamp.id %}
+                                            {% if lamp_place.carcase.id == carcases.id %}
+                                                {% if lamp_place.places.id == carcase.places.id %}
+                                                    <li class="type_container">
+                                                        <a class="type_url" href="#">
+                                                            {{lamp_place.lamp.type}}
+                                                        </a>
+                                                    </li>
+                                                {% endif %}
+                                            {% endif %}
+                                        {% endif %}
+                                    {% endfor %}
+                                {% endfor %} {% endcomment %}
+
+                                {% for lamp_base in lamps_bases %}
+                                    {% for lamp_place in lamps_places %}
+                                        {% if lamp_base.id == lamp_place.lamp_base.id %}
+                                            {% if lamp_place.carcase.id == carcases.id %}
+                                                {% if lamp_place.places.id == carcase.places.id %}
+                                                    <li class="type_container">
+                                                        <a class="type_url" href="#">
+                                                            {{lamp_place.type}}
+                                                        </a>
+                                                    </li>
+                                                {% endif %}
+                                            {% endif %}
+                                        {% endif %}
+                                    {% endfor %}
+                                {% endfor %}
+
+
+
+
+
+
+
+
                                 {% comment %} <li class="type_container">
                                     <a class="type_url" href="#">
                                         {{lamp.type}}

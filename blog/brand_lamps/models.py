@@ -3,7 +3,8 @@ from django.db import models
 # Create your models here.
 
 class BrandLamp(models.Model):
-    name = models.CharField('Производитель', max_length=50)
+    name = models.CharField('Производитель', max_length=50, default='', blank=True)
+    # name = models.CharField('Производитель', max_length=50, unique=True, db_index=True, blank=False)
 
     def __str__(self) -> str:
         return self.name

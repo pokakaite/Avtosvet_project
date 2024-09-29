@@ -3,10 +3,11 @@ from django.db import models
 # Create your models here.
 
 class AmountType(models.Model):
-    title = models.CharField('Тип количества', max_length=10)
+    type = models.CharField('Тип количества', max_length=10, default='', blank=False)
+    # type = models.CharField('Тип количества', max_length=10, unique=True, db_index=True, blank=False)
 
     def __str__(self) -> str:
-        return self.title
+        return self.type
     
     def get_absolute_url(self):
         return 

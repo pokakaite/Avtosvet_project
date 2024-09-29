@@ -7,8 +7,6 @@ from length.models import Length
 from brand_lamps.models import BrandLamp
 from colors.models import Color
 from amount_types.models import AmountType
-from carcases.models import Carcase
-from places.models import Place
 
 # Create your models here.
 
@@ -24,7 +22,7 @@ class Lamp(models.Model):
     brand = models.ForeignKey(BrandLamp, on_delete=models.CASCADE, null=False, default=None, verbose_name='Производитель')
     amount_type = models.ForeignKey(AmountType, on_delete=models.CASCADE, null=True, default=None, verbose_name='Тип количества')
     price = models.IntegerField('Цена', null=True, default=0)
-    image = models.ImageField(default='no_image.svg', upload_to='profiles', verbose_name='Изображение')
+    image = models.ImageField(default='no_image.svg', upload_to='lamps', verbose_name='Изображение')
 
     def __str__(self) -> str:
         return f'Лампа {self.base} {self.voltage} {self.title}'
@@ -36,8 +34,3 @@ class Lamp(models.Model):
         db_table: str = 'lamp'
         verbose_name = 'Лампу'
         verbose_name_plural = 'Лампы'
-
-class PlaceLamp(models.Model):
-    places = models.ForeignKey(Place, on_delete=models.CASCADE)
-    lamp = models.ForeignKey(Lamp, related_name="places", on_delete=models.CASCADE)
-    carcase = models.ForeignKey(Carcase, on_delete=models.CASCADE)

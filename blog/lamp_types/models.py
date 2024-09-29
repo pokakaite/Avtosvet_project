@@ -6,6 +6,7 @@ from django.urls import reverse
 class Type(models.Model):
     type = models.CharField('Тип лампы', max_length=50)
     slug = models.SlugField(max_length=50, db_index=True, default='', blank=True)
+    # slug = models.SlugField(max_length=50, db_index=True, unique=True, blank=False)
 
     def __str__(self) -> str:
         return f'{self.type}'

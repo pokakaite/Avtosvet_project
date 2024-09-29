@@ -31,7 +31,7 @@
             <a href="{% url "main:index" %}">Главная</a>
         </div>
         <div class="header header_catalog">
-            <div><a href="{% url "catalog:index" %}">Каталог</a></div>
+            <div><a href="{% url "main:catalog" %}">Каталог</a></div>
         </div>
         <div class="header header_payment">
             <div><a href="{% url "main:payment" %}">Оплата и доставка</a></div>
@@ -39,7 +39,7 @@
         <div class="header header_search">
             <input class="search" type="search" placeholder="Что ищете?">
             <div class="header header_search_icon">
-                <img class="icon search_icon" src="{% static 'source/img/search.svg' %}" alt="">
+                <img class="icon search_icon" src="{% static 'source/img/search.jpg' %}" alt="">
             </div>
         </div>
         <div class="header header_profile">
@@ -57,10 +57,10 @@
     <menu id="menu">
         <div class="menu_title" id="menu_title">
             <div class="menu_name" id="close">Навигация</div>
-            <div class="close"><img class="icon icon_close" src={% static 'source/img/close2.svg' %} alt="Закрыть"></div>
+            <div class="close"><img class="icon icon_close" src={% static 'source/img/close.jpg' %} alt="Закрыть"></div>
         </div>
         <div class="menu_nav menu_nav_main"><div class="menu_nav_text"><a class="menu_url" href="{% url "main:index" %}">Главная</a></div></div>
-        <div class="menu_nav"><div class="menu_nav_text"><a class="menu_url" href="{% url "catalog:index" %}">Каталог</a></div></div>
+        <div class="menu_nav"><div class="menu_nav_text"><a class="menu_url" href="{% url "main:catalog" %}">Каталог</a></div></div>
         <div class="menu_nav"><div class="menu_nav_text"><a class="menu_url" href="{% url "main:payment" %}">Оплата и доставка</a></div></div>
         <div class="menu_nav"><div class="menu_nav_text"><a class="menu_url" href="#">Поиск</a></div></div>
         <div class="menu_nav"><div class="menu_nav_text"><a class="menu_url" href="{% url "users:register" %}">Профиль</a></div></div>

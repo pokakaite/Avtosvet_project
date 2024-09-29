@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from brand_autos.models import BrandAuto
+from lamps.models import Lamp
 
 # Create your views here.
 
@@ -17,3 +18,18 @@ def payment(request):
         'main_title': 'Оплата и доставка'
     }
     return render(request, 'main/payment.html', cont)
+
+def catalog(request):
+    model = Lamp.objects.all()
+    cont = {
+        'types': {
+            'Галогенные лампы': 1,
+            'Светодиодные лампы': 2,
+            'Ксеноновые лампы': 3
+        },
+        'Галогенные лампы': 'halogen',
+        'Светодиодные лампы': 'led',
+        'Ксеноновые лампы': 'xenon',
+        'lamps': model
+    }
+    return render(request, 'main/catalog.html', cont)
