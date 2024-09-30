@@ -27,6 +27,12 @@ def main():
     #         except BaseException as e:
     #             print(e)
 
+    with open('blog/brand_autos.txt', 'r+', encoding='utf-8') as f:
+        for s in map(str.strip, f.readlines()):
+            with open('blog/brand_autos_slug.txt', 'a+', encoding='utf-8') as f1:
+                f1.write(s.lower())
+
+
 
 if __name__ == '__main__':
     main()
