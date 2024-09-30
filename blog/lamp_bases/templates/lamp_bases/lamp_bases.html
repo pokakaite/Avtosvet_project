@@ -6,38 +6,70 @@
     </h1>
 
     <div class="lamps_container">
-        {% for lamp in lamps %}
-            {% for lamp_base_obj in lamp_bases_obj %}
-                {% if lamp.base.id == lamp_base_obj.id %}
-                    {% if lamp.base.id == lamp_bases.id %}
-                        {% if lamp.id.type == lamp_base_obj.id.type %}
-                            <div class="one_lamp_container">
-                                <div class="image_container">
-                                    <img class="lamp_image" src="{{lamp.image.url}}">
-                                </div>
-                                <div class="lamp_title">
-                                    <div class="lamp_title_margin">Лампа {{lamp.voltage}} {{lamp.base}} {{lamp.watts}}</div>
-                                    <div class="lamp_title_margin">
-                                        {% if lamp.title %}
-                                            {{lamp.title}}
-                                        {% endif %}
+        {% for lamp_base in lamp_bases_obj %}
+            {% if lamp_base.id == lamp_bases.id %}
+                {% for lamp_place in lamp_places %}
+                    {% if lamp_base.id == lamp_place.lamp_base.id %}
+                        {% for lamp in lamps %}
+                            {% if lamp.type == lamp_place.type %}
+                                <div class="one_lamp_container">
+                                    <div class="image_container">
+                                        <img class="lamp_image" src="{{lamp.image.url}}">
+                                    </div>
+                                    <div class="lamp_title">
+                                        <div class="lamp_title_margin">Лампа {{lamp.voltage}} {{lamp.base}} {{lamp.watts}}</div>
+                                        <div class="lamp_title_margin">
+                                            {% if lamp.title %}
+                                                {{lamp.title}}
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                    <div class="lamp_items lamp_brand">
+                                        Производитель {{lamp.brand}}
+                                    </div>
+                                    <div class="lamp_items lamp_price">
+                                        {{lamp.price}} руб/{{lamp.amount_type}}
+                                    </div>
+                                    <div class="lamp_items button_item">
+                                        <button class="buy_button">Купить</button>
                                     </div>
                                 </div>
-                                <div class="lamp_items lamp_brand">
-                                    Производитель {{lamp.brand}}
-                                </div>
-                                <div class="lamp_items lamp_price">
-                                    {{lamp.price}} руб/{{lamp.amount_type}}
-                                </div>
-                                <div class="lamp_items button_item">
-                                    <button class="buy_button">Купить</button>
-                                </div>
-                            </div>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+        {% comment %} {% for lamp in lamps %}
+            {% if lamp.base.id == lamp_bases.id %} 
+                {% for lamp_place in lamp_places %}
+                    {% if lamp_place.lamp_base.id == lamp_bases.id %}
+                        {% if lamp.type == lamp_place.type %}
+                            {% if lamp.base.id == lamp_place.lamp_base.id %} {% endcomment %}
+                                
+                            {% comment %} {% endif %}
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        {% endfor %} {% endcomment %}
+        {% comment %} {% for lamp in lamps %} 
+            {% for lamp_place in lamp_places %}
+                {% if lamp.base == lamp_place.lamp_base %}
+                    {% if lamp.id.type == lamp_places.id.type %}
+                        {% if lamp_place.lamp_base.id == lamp_bases.id %}
+                            {% for lamp_base_obj in lamp_bases_obj %}
+                                {% if lamp_base_obj.id == lamp_bases.id %}
+                                    {% if lamp.id.type == lamp_place.id.type %} {% endcomment %}
+                                    
+                                    {% comment %} {% endif %}
+                                {% endif %}
+                            {% endfor %}
                         {% endif %}
                     {% endif %}
                 {% endif %}
             {% endfor %}
-        {% endfor %}
+        {% endfor %} {% endcomment %}
     </div>
 
         {% comment %} {% for lamp in lamps %}
