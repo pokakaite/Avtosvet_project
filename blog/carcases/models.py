@@ -15,7 +15,7 @@ class Carcase(models.Model):
     # name = models.CharField('Кузов', max_length=30, default='', blank=True)
     # slug = models.SlugField(max_length=50, db_index=True, default='', blank=True)
     # year = models.CharField('Год производства', max_length=30, blank=False, null=False)
-    # image = models.ImageField(default='no_image.svg', upload_to='carcases', verbose_name='Изображение')
+    image = models.ImageField(default='no_image.svg', upload_to='carcases', verbose_name='Изображение')
 
     def __str__(self) -> str:
         return self.name

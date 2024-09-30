@@ -1,0 +1,59 @@
+{% extends "main/layout.html" %}
+{% block content %}
+    <div class="form_container">
+        <form method="POST" action="#">
+            {% csrf_token %}
+            <div class="form_items_container">
+                <div class="for_item">
+                    <div>Имя пользователя {{form.username}}</div>
+                    <div>E-mail {{form.email}}</div>
+                    <div>Пароль {{form.password1}}</div>
+                    <div>Повторите пароль {{form.password2}}</div>
+                </div>
+            </div>
+            <div class="button_item">
+                <button type="submit" class="btn btn-primary">
+                    Зарегистрироваться
+                </button>
+            </div>
+            <div class="register_login">
+                Уже зарегистрированы?
+                <a href="login" class="login_url">Войти</a>
+            </div>
+        </form>
+    </div>
+
+
+    <div class="toast-container position-absolute top-0 start-50 translate-middle-x">
+        {% for message in messages %}
+            <div class="toast text-white bg-{{ message.tags }}" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                <strong class="me-auto">
+                    {% if message.tags == 'success' %}
+                        Успех
+                    {% elif message.tags == 'warning' %}
+                        Ошибка
+                    {% endif %}
+                </strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="close"></button>
+                </div>
+                <div class="toast-body">
+                    {{ message }}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <script>
+        window.onload = function () {
+            var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+            var toastList = toastElList.map(function (toastEl) {
+            let toast = new bootstrap.Toast(toastEl);
+            toast.show();
+            return toast;
+            })
+        };
+
+    </script>
+
+{% endblock content %}

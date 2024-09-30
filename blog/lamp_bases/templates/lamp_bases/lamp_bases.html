@@ -1,0 +1,70 @@
+{% extends "main/layout.html" %}
+
+{% block content %}
+    <h1 class="main_title">
+        {{title}} {{lamp_bases.name}} ({{lamp_bases.watts}})
+    </h1>
+
+    <div class="lamps_container">
+        {% for lamp in lamps %}
+            {% for lamp_base_obj in lamp_bases_obj %}
+                {% if lamp.base.id == lamp_base_obj.id %}
+                    {% if lamp.base.id == lamp_bases.id %}
+                        {% if lamp.id.type == lamp_base_obj.id.type %}
+                            <div class="one_lamp_container">
+                                <div class="image_container">
+                                    <img class="lamp_image" src="{{lamp.image.url}}">
+                                </div>
+                                <div class="lamp_title">
+                                    <div class="lamp_title_margin">Лампа {{lamp.voltage}} {{lamp.base}} {{lamp.watts}}</div>
+                                    <div class="lamp_title_margin">
+                                        {% if lamp.title %}
+                                            {{lamp.title}}
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="lamp_items lamp_brand">
+                                    Производитель {{lamp.brand}}
+                                </div>
+                                <div class="lamp_items lamp_price">
+                                    {{lamp.price}} руб/{{lamp.amount_type}}
+                                </div>
+                                <div class="lamp_items button_item">
+                                    <button class="buy_button">Купить</button>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    </div>
+
+        {% comment %} {% for lamp in lamps %}
+            {% if lamp.type.id == lamp_type.id%}
+                <div class="one_lamp_container">
+                    <div class="image_container">
+                        <img class="lamp_image" src="{{lamp.image.url}}">
+                    </div>
+                    <div class="lamp_title">
+                        <div class="lamp_title_margin">Лампа {{lamp.voltage}} {{lamp.base}} {{lamp.watts}}</div>
+                        <div class="lamp_title_margin">
+                            {% if lamp.title %}
+                                {{lamp.title}}
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="lamp_items lamp_brand">
+                        Производитель {{lamp.brand}}
+                    </div>
+                    <div class="lamp_items lamp_price">
+                        {{lamp.price}} руб/{{lamp.amount_type}}
+                    </div>
+                    <div class="lamp_items button_item">
+                        <button class="buy_button">Купить</button>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div> {% endcomment %}
+{% endblock content %}

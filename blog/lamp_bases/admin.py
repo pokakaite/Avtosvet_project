@@ -7,7 +7,7 @@ class PlaceInline(admin.TabularInline):
     model = PlaceLamp
 
 class LampAdmin(admin.ModelAdmin):
-    fields = ['name', 'watts']
+    fields = ['name', 'slug', 'watts', 'image']
     inlines = [PlaceInline]
 
 admin.site.register(LampBase, LampAdmin)

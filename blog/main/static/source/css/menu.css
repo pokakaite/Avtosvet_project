@@ -7,6 +7,8 @@ menu {
     margin-left: -40px;
     font-size: 5vh;
     background-color: rgb(149, 149, 149);
+    border-radius: 3px;
+
 }
 
 .menu_title {
@@ -17,14 +19,13 @@ menu {
     text-align: start;
     background-color: rgb(185, 185, 185);
     background-color: rgb(149, 149, 149);
-
     font-weight: bold;
     cursor: pointer;
     margin: auto;
 }
 
 .menu_name {
-    color: rgb(29, 39, 50);
+    color: rgb(0, 0, 0);
     width: 25vw;
     margin-left: 2.5vw;
 }
@@ -36,6 +37,8 @@ menu {
     display: flex;
     margin: auto;
     margin-top: 1vh;
+    border-radius: 3px;
+
 }
 
 .menu_nav_main {

@@ -41,7 +41,7 @@ header {
     height: 35px;
     background-color: rgb(246, 246, 246);
     padding-left: 10px;
-    border-radius: 1px;
+    border-radius: 3px;
     border: white;
     box-shadow: rgb(125, 162, 200) 0 0 15px;
 }

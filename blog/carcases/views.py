@@ -33,6 +33,7 @@ def carcase(request, carcase_slug, brand_slug, model_slug):
         'title': 'Лампы для',
         'brand_slug': brand_slug,
         'model_slug': model_slug,
+        'carcase_slug': carcase_slug,
         'places': places,
         'types': types,
         'lamps_places': lamps_places,

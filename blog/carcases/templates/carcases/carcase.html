@@ -40,7 +40,7 @@
                                             {% if lamp_place.carcase.id == carcases.id %}
                                                 {% if lamp_place.places.id == carcase.places.id %}
                                                     <li class="type_container">
-                                                        <a class="type_url" href="#">
+                                                        <a class="type_url" href="{{carcase_slug}}/{{lamp_base.slug}}">
                                                             {{lamp_place.type}}
                                                         </a>
                                                     </li>

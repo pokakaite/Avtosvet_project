@@ -4,7 +4,7 @@ from .forms import UserRegisterForm
 
 # Create your views here.
 
-def index(request):
+def register(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
         if form.is_valid():
@@ -20,4 +20,4 @@ def index(request):
         'form': form,
         'main_title': 'Вход или Регистрация'
     }
-    return render(request, 'users/index.html', cont)
+    return render(request, 'users/register.html', cont)

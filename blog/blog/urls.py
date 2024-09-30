@@ -18,14 +18,54 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib.auth import views as auth_views
+from django.contrib.auth import views as auth_views
+from users.views import register as user_register
+from profiles.views import profile as user_profile
+
 
 urlpatterns = [
-    path('admin/', admin.site.urls, name='admin'),
+    path('bruh/', admin.site.urls, name='bruh'),
     path('', include('main.urls', namespace='main')),
     path('brands_autos/', include('brand_autos.urls', namespace='brand_autos')),
     path('brands_autos/<slug:brand_slug>/', include('carcases.urls', namespace='carcases')),
+    path('brands_autos/<slug:brand_slug>/', include('lamp_bases.urls', namespace='lamp_bases')),
     path('user/', include('users.urls', namespace='users')),
-    path('catalog/', include('catalog.urls', namespace='catalog')),
     path('catalog/<slug:type_slug>/', include('lamp_types.urls', namespace='lamp_types')),
-    path('cart/', include('cart.urls', namespace='cart'))
+    path('cart/', include('cart.urls', namespace='cart')),
+    path('user/register/', user_register, name='register'),
+    path('user/register/login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
+    path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
+    path('accounts/profile/', user_profile, name='profile'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+# from django.contrib import admin
+# from django.urls import path, include
+# from django.conf import settings
+# from django.conf.urls.static import static
+
+# from django.contrib.auth import views as auth_views
+# from users.views import register as user_register
+# from profiles.views import profile as user_profile
+# from users.models import router, routers
+# from users.models import UserViewSet
+# from books.models import BookViewSet
+
+
+
+# router = routers.DefaultRouter()
+# router.register(r'users', UserViewSet)
+# router.register(r'books', BookViewSet)
+
+
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+#     path('', include('main.urls')),
+#     path('user/register/', user_register, name='register'),
+#     path('user/register/login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
+#     path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
+#     path('accounts/profile/', user_profile, name='profile'),
+#     # path('api/auth/', include('rest_framework.urls')),
+#     # path('api/v1/', include(router.urls))
+# ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

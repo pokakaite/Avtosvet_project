@@ -1,0 +1,20 @@
+.form_container {
+    border: 1px solid black;
+    width: 50vw;
+    margin: auto;
+}
+
+.titles_form_items {
+    display: flex;
+    margin: auto;
+}
+
+.titles_container, .form_items_container {
+    width: 15vw;
+    margin: auto;
+}
+
+.form_title {
+    text-align: right;
+}
+
