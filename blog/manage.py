@@ -20,18 +20,16 @@ def main():
     # from brand_autos.models import BrandAuto
 
     # with open('brand_autos.txt', encoding='utf-8') as f:
-    #     for s in map(str.strip, f.readlines()):
-    #         try:
-    #             obj = BrandAuto.objects.create(name=s)
-    #             obj.save()
-    #         except BaseException as e:
-    #             print(e)
-
-    with open('blog/brand_autos.txt', 'r+', encoding='utf-8') as f:
-        for s in map(str.strip, f.readlines()):
-            with open('blog/brand_autos_slug.txt', 'a+', encoding='utf-8') as f1:
-                f1.write(s.lower())
-
+    #     brands = list(map(str.strip, f.readlines()))
+    # with open('brand_autos_slug.txt', encoding='utf-8') as f:
+    #     brands_slug = list(map(str.strip, f.readlines()))
+    # assert len(brands) == len(brands_slug), 'Длины не совпадают'
+    # for s, s_slug in zip(brands, brands_slug):
+    #     try:
+    #         obj = BrandAuto.objects.create(name=s, slug=s_slug)
+    #         obj.save()
+    #     except BaseException as e:
+    #         print(e)
 
 
 if __name__ == '__main__':
