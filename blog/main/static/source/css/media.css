@@ -93,6 +93,12 @@
     }
 }
 
+@media(max-width: 500px) {
+    .table_container {
+        font-size: 10px;
+    }
+}
+
 @media(min-width: 2700px) {
     footer {
         position: fixed;

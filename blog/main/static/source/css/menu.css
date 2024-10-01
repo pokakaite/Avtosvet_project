@@ -1,20 +1,19 @@
 menu {
     display: none;
-    width: 30vw;
+    width: 210px;
     position: absolute;
     z-index: 2;
     margin-top: 0;
     margin-left: -40px;
-    font-size: 5vh;
+    font-size: 20px;
     background-color: rgb(149, 149, 149);
     border-radius: 3px;
-
 }
 
 .menu_title {
     align-items: center;
-    height: 15vh;
-    width: 29vw;
+    height: 60px;
+    width: 200px;
     display: flex;
     text-align: start;
     background-color: rgb(185, 185, 185);
@@ -27,18 +26,17 @@ menu {
 .menu_name {
     color: rgb(0, 0, 0);
     width: 25vw;
-    margin-left: 2.5vw;
+    margin-left: 19px;
 }
 
 .menu_nav {
-    height: 15vh;
-    width: 29vw;
+    height: 60px;
+    width: 200px;
     background-color: rgb(221, 221, 221);
     display: flex;
     margin: auto;
-    margin-top: 1vh;
+    margin-top: 5px;
     border-radius: 3px;
-
 }
 
 .menu_nav_main {
@@ -46,13 +44,13 @@ menu {
 }
 
 .menu_nav_cart {
-    margin-bottom: 1vh;
+    margin-bottom: 5px;
 }
 
 .menu_nav_text {
     width: auto;
     margin: auto;
-    margin-left: 2.5vw;
+    margin-left: 19px;
 }
 
 .menu_url {
@@ -65,11 +63,12 @@ menu {
 }
 
 .close {
-    width: 5vw;
+    width: 50px;
+    margin-left: 67px;
 }
 
 .icon_close {
-    width: 2vw;
-    margin-top: 1vw;
+    width: 10px;
+    margin-top: 10px;
 }
 

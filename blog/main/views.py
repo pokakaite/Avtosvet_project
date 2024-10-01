@@ -1,15 +1,18 @@
 from django.shortcuts import render
 from brand_autos.models import BrandAuto
 from lamps.models import Lamp
+from users.models import User
 
 # Create your views here.
 
 def index(request):
     brand_autos = BrandAuto.objects.order_by('name')
+    users = User.objects.all()
     cont = {
         'title': 'Главная',
         'main_title': 'Подбор ламп по авто',
-        'brand_autos': brand_autos
+        'brand_autos': brand_autos,
+        'users': users
     }
     return render(request, 'main/index.html', cont)
 

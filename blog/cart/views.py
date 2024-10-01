@@ -2,8 +2,8 @@ from django.shortcuts import render
 
 # Create your views here.
 
-def index(request):
+def cart(request):
     cont = {
         'main_title': 'Корзина'
     }
-    return render(request, 'cart/index.html', cont)
+    return render(request, 'cart/cart.html', cont)

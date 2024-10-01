@@ -33,11 +33,10 @@ header {
 
 .header_search {
     display: flex;
-    margin-right: 3vw;
 }
 
 .search {
-    width: 35vw;
+    width: 38vw;
     height: 35px;
     background-color: rgb(246, 246, 246);
     padding-left: 10px;
@@ -72,6 +71,6 @@ header a {
 
 
 .header_cart {
-    margin-right: 2vw;
+    margin-right: 3.5vw;
 }
 
