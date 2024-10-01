@@ -1,6 +1,7 @@
 .model_container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    min-height: fit-content;
     width: 80vw;
     margin: auto;
 }
@@ -26,4 +27,34 @@
     text-decoration: none;
     color: rgb(29, 39, 50);
     font-weight: 700;
+}
+
+@media (min-width: 1700px) {
+    .model_container {
+        grid-template-columns: repeat(7, 1fr)
+    }
+}
+
+@media (min-width: 1500px) {
+    .model_container {
+        grid-template-columns: repeat(6, 1fr)
+    }
+}
+
+@media (max-width: 1200px) {
+    .model_container {
+        grid-template-columns: repeat(4, 1fr)
+    }
+}
+
+@media (max-width: 900px) {
+    .model_container {
+        grid-template-columns: repeat(3, 1fr)
+    }
+}
+
+@media (max-width: 600px) {
+    .model_container {
+        grid-template-columns: repeat(2, 1fr)
+    }
 }

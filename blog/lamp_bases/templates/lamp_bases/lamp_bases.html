@@ -10,6 +10,7 @@
             {% for lamp_place in lamp_places %}
                 {% if lamp.base.id == lamp_base_main.id %}
                     {% if lamp.type == lamp_place.type and lamp_place.lamp_base.id == lamp_base_main.id and lamp.type == lamp_base_main.type %}
+                        {% if lamp_place.carcase == carcase_main %}
                         <div class="one_lamp_container">
                             <div class="image_container">
                                 <img class="lamp_image" src="{{lamp.image.url}}">
@@ -34,6 +35,7 @@
                                 </form>
                             </div>
                         </div>
+                        {% endif %}
                     {% endif %}
                 {% endif %}
             {% endfor %}

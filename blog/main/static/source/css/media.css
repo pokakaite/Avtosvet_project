@@ -34,7 +34,6 @@
 }
 
 @media(max-width: 900px) {
-
     .header_main, .header_catalog, .header_search {
         display: none;
     }
@@ -76,6 +75,8 @@
         margin: 3vh 0 3vh 8vw;
         grid-template-columns: repeat(5, 1fr);
     }
+
+
 }
 
 @media(max-width: 700px) {
@@ -91,12 +92,14 @@
         margin: 3vh 0 3vh 8vw;
         grid-template-columns: repeat(3, 1fr);
     }
+
 }
 
 @media(max-width: 500px) {
     .table_container {
         font-size: 10px;
     }
+
 }
 
 @media(min-width: 2700px) {

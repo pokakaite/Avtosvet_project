@@ -7,8 +7,8 @@ from carcases.models import Carcase
 
 def brand_auto(request, brand_slug):
     brand_autos = get_object_or_404(BrandAuto, slug=brand_slug)
-    models_autos = ModelAuto.objects.all()
-    carcases = Carcase.objects.all()
+    models_autos = ModelAuto.objects.order_by('slug')
+    carcases = Carcase.objects.order_by('slug')
     
     cont = {
         'brand_autos': brand_autos,

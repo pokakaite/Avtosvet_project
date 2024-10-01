@@ -14,7 +14,7 @@
                         <div class="model_container">
                             {% for carcase in carcases %}
                                 {% if carcase.model.id == model.id%}
-                                <div>
+                                <div class="carcase_box">
                                     <a class="carcase_url" href="{{model.slug}}/{{carcase.slug}}">
                                         <div class="image_container carcase_image_container">
                                             <img class="carcase_image" src="{{carcase.image.url}}">
@@ -24,7 +24,7 @@
                                                 {{carcase}} 
                                             </div>
                                             <div>
-                                                {{carcase.year}}
+                                                ({{carcase.year}})
                                             </div>
                                         </div>
                                     </a>
