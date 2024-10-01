@@ -6,29 +6,31 @@
     <div class="lamps_container">
         {% for lamp in lamps %}
             {% if lamp.type.id == i%}
-                <div class="one_lamp_container">
-                    <div class="image_container">
-                        <img class="lamp_image" src="{{lamp.image.url}}">
-                    </div>
-                    <div class="lamp_title">
-                        <div class="lamp_title_margin">Лампа {{lamp.voltage}} {{lamp.base}} {{lamp.watts}}</div>
-                        <div class="lamp_title_margin">
-                            {% if lamp.title %}
-                                {{lamp.title}}
-                            {% endif %}
+                <a class="one_lamp_container_url" href="{{lamp_base_main.slug}}/{{lamp.slug}}">
+                    <div class="one_lamp_container">
+                        <div class="image_container">
+                            <img class="lamp_image" src="{{lamp.image.url}}">
                         </div>
+                        <div class="lamp_title">
+                            <div class="lamp_title_margin">Лампа {{lamp.voltage}} {{lamp.base}} {{lamp.watts}}</div>
+                            <div class="lamp_title_margin">
+                                {% if lamp.title %}
+                                    {{lamp.title}}
+                                {% endif %}
+                            </div>
 
+                        </div>
+                        <div class="lamp_items lamp_brand">
+                            Производитель {{lamp.brand}}
+                        </div>
+                        <div class="lamp_items lamp_price">
+                            {{lamp.price}} руб/{{lamp.amount_type}}
+                        </div>
+                        <div class="lamp_items button_item">
+                            <button class="buy_button">Купить</button>
+                        </div>
                     </div>
-                    <div class="lamp_items lamp_brand">
-                        Производитель {{lamp.brand}}
-                    </div>
-                    <div class="lamp_items lamp_price">
-                        {{lamp.price}} руб/{{lamp.amount_type}}
-                    </div>
-                    <div class="lamp_items button_item">
-                        <button class="buy_button">Купить</button>
-                    </div>
-                </div>
+                </a>
             {% endif %}
         {% endfor %}
     </div>

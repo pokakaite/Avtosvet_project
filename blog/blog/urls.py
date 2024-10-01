@@ -30,6 +30,7 @@ urlpatterns = [
     path('brands_autos/', include('brand_autos.urls', namespace='brand_autos')),
     path('brands_autos/<slug:brand_slug>/', include('carcases.urls', namespace='carcases')),
     path('brands_autos/<slug:brand_slug>/', include('lamp_bases.urls', namespace='lamp_bases')),
+    path('brands_autos/<slug:brand_slug>/', include('lamps.urls', namespace='lamps')),
     path('user/', include('users.urls', namespace='users')),
     path('catalog/<slug:type_slug>/', include('lamp_types.urls', namespace='lamp_types')),
     path('cart/', include('cart.urls', namespace='cart')),

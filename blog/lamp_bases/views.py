@@ -12,28 +12,19 @@ from lamp_types.models import Type
 def lamp_bases(request, carcase_slug, brand_slug, model_slug, lamp_base_slug):
     lamp_base_main = get_object_or_404(LampBase, slug=lamp_base_slug)
     carcase_main = get_object_or_404(Carcase, slug=carcase_slug)
+    brand_main = get_object_or_404(BrandAuto, slug=brand_slug)
+    model_main = get_object_or_404(ModelAuto, slug=model_slug)
     lamp_places = PlaceLamp.objects.all()
     carcases_obj = Carcase.objects.all()
     lamp_bases = LampBase.objects.all()
     brand_autos = BrandAuto.objects.all()
     models_autos = ModelAuto.objects.all()
     places = Place.objects.all()
-    lamps = Lamp.objects.all()
+    lamps = Lamp.objects.order_by('price')
     lamp_types = Type.objects.all()
     carcase_places = CarcasePlace.objects.all()
 
-    for carcase in carcases_obj:
-        # for lamp_place in lamp_places:
-        #     if lamp_place.carcase == carcase.name:
-        #         carcase_slug == carcase.slug
-        for model_auto in models_autos:
-            if carcase.model == model_auto.name:
-                model_slug == model_auto.slug
-        for brand in brand_autos:
-            if model_auto.brand == brand.name:
-                brand_slug = brand.slug
-
-        cont = {
+    cont = {
         'title': 'Цоколь',
         'lamp_base_main': lamp_base_main,
         'lamp_bases': lamp_bases,
@@ -45,9 +36,12 @@ def lamp_bases(request, carcase_slug, brand_slug, model_slug, lamp_base_slug):
         'lamp_places': lamp_places,
         'lamps': lamps,
         'lamp_types': lamp_types,
-        'error': None,
         'carcase_places': carcase_places,
         'carcase_main': carcase_main,
+        'carcase_main': carcase_main,
+        'brand_main': brand_main,
+        'model_main': model_main,
+        'lamp_base_main': lamp_base_main
     }
 
     return render(request, 'lamp_bases/lamp_bases.html', cont)

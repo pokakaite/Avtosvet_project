@@ -5,7 +5,7 @@ menu {
     z-index: 2;
     margin-top: 0;
     margin-left: -40px;
-    font-size: 20px;
+    font-size: 17px;
     background-color: rgb(149, 149, 149);
     border-radius: 3px;
 }
@@ -26,7 +26,8 @@ menu {
 .menu_name {
     color: rgb(0, 0, 0);
     width: 25vw;
-    margin-left: 19px;
+    margin-left: 10px;
+
 }
 
 .menu_nav {
@@ -50,7 +51,7 @@ menu {
 .menu_nav_text {
     width: auto;
     margin: auto;
-    margin-left: 19px;
+    margin-left: 10px;
 }
 
 .menu_url {
