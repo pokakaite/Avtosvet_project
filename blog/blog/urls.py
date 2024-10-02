@@ -33,7 +33,7 @@ urlpatterns = [
     path('brands_autos/<slug:brand_slug>/', include('lamps.urls', namespace='lamps')),
     path('user/', include('users.urls', namespace='users')),
     path('catalog/<slug:type_slug>/', include('lamp_types.urls', namespace='lamp_types')),
-    path('cart/', include('cart.urls', namespace='cart')),
+    # path('cart/', include('cart.urls', namespace='cart')),
     path('user/register/', user_register, name='register'),
     path('user/register/login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),

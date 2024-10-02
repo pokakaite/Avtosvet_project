@@ -1,0 +1,78 @@
+.lamp_container {
+    width: 70vw;
+    height: auto;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.lamp_item {
+    margin: auto;
+    margin-top: 20px;
+}
+
+.lamp_main_image_container {
+    width: 320px;
+    height: 320px;
+    box-shadow:rgba(29, 39, 50, 0.493) 0 0 15px;
+}
+
+.lamp_main_image {
+    width: 300px;
+    height: 300px;
+}
+
+.lamp_main_info_container {
+    text-align: left;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.info_container {
+    display: flex;
+    width: 350px;
+    margin: auto;
+}
+
+.info_title {
+    font-weight: 700;
+    padding-right: 5px;
+}
+
+.lamp_main_button_item {
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+}
+
+.main_buy_button {
+    margin: auto;
+    padding: 12px 60px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(29, 39, 50);
+    color: rgb(239, 239, 239);
+}
+
+@media (max-width: 1100px) {
+    .lamp_container {
+        width: 85vw;
+    }
+}
+
+@media (max-width: 900px) {
+    .lamp_container {
+        width: 85vw;
+        grid-template-columns: 1fr;
+    }
+
+    .lamp_main_info_container {
+        width: 300px;
+    }
+
+    .info_container {
+        margin-left: 50px;
+    }
+}

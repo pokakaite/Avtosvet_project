@@ -1,7 +1,69 @@
 {% extends "main/layout.html" %}
 
 {% block content %}
-    <div class="image_container">
-        <img class="lamp_image" src="{{lamp_main.image.url}}">
+    <h1 class="main_title">
+        Лампа
+    </h1>
+
+    <div class="lamp_container">
+        <div class="lamp_main_image_container lamp_item">
+            <img class="lamp_main_image" src="{{lamp_main.image.url}}">
+        </div>
+        <div class="lamp_main_info_container lamp_item">
+            <div class="info_container">
+                <div class="info_title">Цоколь:</div>
+                <div>{{lamp_main.base}}</div>
+            </div>
+            <div class="info_container">
+                <div class="info_title">Тип:</div>
+                <div>{{lamp_main.type}}</div>
+            </div>
+            <div class="info_container">
+                <div class="info_title">Напряжение:</div>
+                <div>{{lamp_main.voltage}}</div>
+            </div>
+            <div class="info_container">
+                <div class="info_title">Мощность:</div>
+                <div>{{lamp_main.watts}}</div>
+            </div>
+            <div class="info_container">
+                <div class="info_title">Описание:</div>
+                <div>{{lamp_main.title}}</div>
+            </div>
+            {% if lamp_main.offset != None %}
+            <div class="info_container">
+                <div class="info_title">Смещение:</div>
+                <div>{{lamp_main.offset}}</div>
+            </div>
+            {% endif %}
+            {% if lamp_main.length != None %}
+            <div class="info_container">
+                <div class="info_title">Длина:</div>
+                <div>{{lamp_main.length}}</div>
+            </div>
+            {% endif %}
+            <div class="info_container">
+                <div class="info_title">Температура света, K:</div>
+                <div>{{lamp_main.color}}</div>
+            </div>
+            <div class="info_container">
+                <div class="info_title">Производитель:</div>
+                <div>{{lamp_main.brand}}</div>
+            </div>
+            <div class="info_container">
+                <div class="info_title">Цена за: </div>
+                <div>{{lamp_main.amount_type}}</div>
+            </div>
+            <div class="info_container">
+                <div class="info_title">Цена:</div>
+                <div>{{lamp_main.price}} руб</div>
+            </div>
+            <form action="">
+                {% csrf_token %}
+                <div class="lamp_main_button_item">
+                    <button class="main_buy_button">Купить</button>
+                </div>
+            </form>
+        </div>
     </div>
 {% endblock content %}

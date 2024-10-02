@@ -14,6 +14,7 @@
     <link rel="stylesheet" href={% static 'source/css/payment.css' %}>
     <link rel="stylesheet" href={% static 'source/css/menu.css' %}>
     <link rel="stylesheet" href={% static 'source/css/register.css' %}>
+    <link rel="stylesheet" href={% static 'source/css/lamps.css' %}>
     <link rel="stylesheet" href="css/media.css">
     <title>{{title}}</title>
 </head>
@@ -61,7 +62,7 @@
             </a> {% endcomment %}
         </div>
         <div class="header header_cart">
-            <a href="{% url "cart:cart" %}">
+            <a href="{% url "main:cart" %}">
                 <img class="icon icon_cart" src="{% static 'source/img/cart.svg' %}" alt="">
             </a>
         </div>
@@ -77,7 +78,7 @@
         <div class="menu_nav"><div class="menu_nav_text"><a class="menu_url" href="{% url "main:payment" %}">Оплата и доставка</a></div></div>
         <div class="menu_nav"><div class="menu_nav_text"><a class="menu_url" href="#">Поиск</a></div></div>
         {% comment %} <div class="menu_nav"><div class="menu_nav_text"><a class="menu_url" href="{% url "users:register" %}">Профиль</a></div></div> {% endcomment %}
-        <div class="menu_nav menu_nav_cart"><div class="menu_nav_text"><a class="menu_url" href="{% url "cart:cart" %}">Корзина</a></div></div>
+        <div class="menu_nav menu_nav_cart"><div class="menu_nav_text"><a class="menu_url" href="{% url "main:cart" %}">Корзина</a></div></div>
     </menu>
 
     <script>

@@ -50,12 +50,16 @@
     grid-row: 10/12;
     display: flex;
     flex-wrap: wrap;
+align-items: center;
 }
 
 .lamp_title_margin {
     width: 200px;
-    height: 20px;
+    min-height: 20px;
     margin: auto;
+    display: block;
+    flex-wrap: wrap;
+    text-align: center;
 }
 
 .lamp_brand {

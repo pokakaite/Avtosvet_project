@@ -26,24 +26,29 @@ def payment(request):
     return render(request, 'main/payment.html', cont)
 
 def catalog(request):
-    model = Lamp.objects.order_by('price')
+    model = Lamp.objects.order_by('-price')
     cont = {
         'types': {
-            'Галогенные лампы': 1,
-            'Светодиодные лампы': 2,
-            'Ксеноновые лампы': 3
+            'Галогенные лампы': '2-halogen',
+            'Светодиодные лампы': '3-led',
+            'Лампы накаливания': '1-incandescent',
+            'Штатные ксеноновые лампы': '4-xenon',
+            'Нештатные ксеноновые лампы': '5-no-xenon',
         },
-        'Галогенные лампы': 'halogen',
-        'Светодиодные лампы': 'led',
-        'Ксеноновые лампы': 'xenon',
         'lamps': model,
     }
     return render(request, 'main/catalog.html', cont)
 
+def cart(request):
+    cont = {
+        'main_title': 'Корзина'
+    }
+    return render(request, 'cart/cart.html', cont)
+
 def lamps(request, lamp_slug):
     lamp_main = get_object_or_404(Lamp, slug=lamp_slug)
     cont = {
-        'lamp_main': lamp_main
+        'lamp_main': lamp_main,
     }
     return render(request, 'lamps/lamps.html', cont)
 
